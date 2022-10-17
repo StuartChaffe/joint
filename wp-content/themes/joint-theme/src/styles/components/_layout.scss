@@ -22,3 +22,20 @@
 	margin-bottom: var(--spacing-l);
 	flex: 1;
 }
+
+// Background colours
+.bkg {
+	&--white {
+		background-color: white;
+		+  .bkg--white {
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+	&--grey {
+		background-color: var(--color-grey);
+	}
+	&--green {
+		background-color: var(--color-green);
+	}
+}

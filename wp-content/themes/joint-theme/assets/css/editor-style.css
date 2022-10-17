@@ -443,7 +443,7 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .main {
+.container, .two-col__video, .two-col, .main {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -455,6 +455,20 @@ div[data-type="core/button"] div[data-block] {
   margin-top: var(--spacing-l);
   margin-bottom: var(--spacing-l);
   flex: 1;
+}
+
+.bkg--white {
+  background-color: white;
+}
+.bkg--white + .bkg--white {
+  margin-top: 0;
+  padding-top: 0;
+}
+.bkg--grey {
+  background-color: var(--color-grey);
+}
+.bkg--green {
+  background-color: var(--color-green);
 }
 
 .content > * {
@@ -580,6 +594,79 @@ div[data-type="core/button"] div[data-block] {
 .btn--primary:hover, .btn--primary:focus {
   border-color: var(--color-primary);
   color: var(--color-primary);
+}
+
+.two-col {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 70em) {
+  .two-col {
+    flex-direction: row;
+  }
+}
+.two-col__item {
+  width: 100%;
+}
+@media (max-width: 69.99em) {
+  .two-col__item {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 70em) {
+  .two-col__item {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 69.99em) {
+  .two-col__item img {
+    width: 50%;
+  }
+}
+.two-col__item-image--small img {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.two-col__item--full {
+  width: 100%;
+}
+@media (max-width: 69.99em) {
+  .two-col__item--order {
+    order: 0;
+  }
+}
+.two-col__item ul, .two-col__item ol {
+  list-style: disc;
+}
+.two-col__item ul li, .two-col__item ol li {
+  margin-bottom: 0.75rem;
+}
+.two-col__item h2, .two-col__item h3, .two-col__item h4, .two-col__item h5 {
+  padding-right: 2rem;
+}
+.two-col__item:first-of-type {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 70em) {
+  .two-col__item:first-of-type {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+@media (min-width: 70em) {
+  .two-col__item:last-of-type {
+    padding-right: 0;
+  }
+}
+.two-col__item .btn {
+  margin-top: 0;
+}
+.two-col__video {
+  margin-top: var(--spacing-s);
+  height: 50vw;
+  max-height: calc(var(--container) / 2);
 }
 
 .accordion {

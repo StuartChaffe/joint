@@ -11,12 +11,16 @@ body.nav-open {
 .site-header--nav__mobile.is-active {
 	transform: translateX(-100%);
 	transition: all 0.2s ease-in-out;
-	background-color: var(--color-primary-light);
+	background-color: white;
 }
 
 .site-header {
 	&--nav {
-		background-color: var(--color-primary-light);
+		&__image {
+			margin-top: auto;
+			margin-left: auto;
+		}
+
 		&-btn {
 			position: absolute;
 			right: 1.5rem;
@@ -40,7 +44,8 @@ body.nav-open {
 		&__mobile {
 			overflow: auto;
 			position: fixed;
-			padding: 50px 2rem;
+			flex-direction: column;
+			padding: 100px 2rem 1rem 2rem;
 			right: -100%;
 			top: 0;
 			width: 100%;
@@ -48,7 +53,7 @@ body.nav-open {
 			z-index: 3;
 			background: transparent;
 			transition: all 0.2s ease-in-out;
-			display: block;
+			display: flex;
 			@media only screen and (min-width: 1040px) {
 				display: none;
 			}
@@ -64,15 +69,17 @@ body.nav-open {
 					position: relative;
 					a {
 						display: flex;
+						justify-content: center;
 						width: 100%;
-						border-bottom: 2px solid rgba(239, 239, 239, 0.2);
-						color:  var(--color-secondary);
-						font-weight: var(--font-weight-bold);
-						padding: 1rem 0;
-						font-size: 1.2rem;
+						border: 1px solid var(--color-primary);
+						color: var(--color-primary);
+						padding: 0.5rem 1rem;
 						text-decoration: none;
+						margin-bottom: 1rem;
+						border-radius: 30px;
 						&:hover {
-							color: white;
+							border: 1px solid var(--color-text-base);
+							color: var(--color-text-base);
 						}
 					}
 					.dropdown-button {
@@ -81,7 +88,7 @@ body.nav-open {
 						position: absolute;
 						right: 0;
 						top: 0;
-						content: url("../../src/icons/arrow-dropdown.svg");
+						content: url("../../src/icons/arrow-down.svg");
 						&:hover {
 							cursor: pointer;
 							// background: rgba(239, 239, 239, 0.1);
@@ -92,12 +99,13 @@ body.nav-open {
 					}
 					.sub-menu {
 						display: none;
-						a {
-							padding-left: 2rem;
-						}
-						.sub-menu a {
-							padding-left: 4rem;
-						}
+						margin: 0 2rem;
+						// a {
+						// 	padding-left: 2rem;
+						// }
+						// .sub-menu a {
+						// 	padding-left: 4rem;
+						// }
 					}
 				}
 				.menu-search {

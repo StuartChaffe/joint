@@ -1,5 +1,8 @@
 <header class="site-header site-header__down">
 	<div class="site-header__inner">
+		<div class="site-header__contact">Call <a href="tel:01273 257 141">01273 257 141</a> to book now!</div>
+
+
 		<div class="site-header__logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Space logo" /></a></div>
 
 		<div class="site-header__content">
@@ -15,5 +18,6 @@
 	</div>
 	<nav class="site-header--nav site-header--nav__mobile">
 		<?php wp_nav_menu( array('theme_location' => 'mobile') ); ?>
+		<div class="site-header--nav__image"><img src="<?php echo get_template_directory_uri(); ?>/src/images/menu-image.png" /></div>
 	</nav>
 </header>

@@ -7,13 +7,13 @@ jQuery(document).ready(function($) {
 		$("body").toggleClass("menu-active");
 		$menuContainer.toggleClass("is-active");
 	});
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 50) {
-			$('.site-header').removeClass('site-header__down').addClass('site-header__up')
-			} else {
-			$('.site-header').addClass('site-header__down').removeClass('site-header__up')
-			}
-	});
+	// $(window).scroll(function(){
+	// 	if ($(this).scrollTop() > 50) {
+	// 		$('.site-header').removeClass('site-header__down').addClass('site-header__up')
+	// 		} else {
+	// 		$('.site-header').addClass('site-header__down').removeClass('site-header__up')
+	// 		}
+	// });
 
 });
 

@@ -468,7 +468,7 @@ div[data-type="core/button"] div[data-block] {
   background-color: var(--color-grey);
 }
 .bkg--green {
-  background-color: var(--color-green);
+  background-color: var(--color-primary);
 }
 
 .content > * {

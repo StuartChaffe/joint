@@ -8,6 +8,7 @@
 	z-index: 99;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	
 	@include mq(medium) {
 		position: fixed;
 	}	
@@ -96,6 +97,8 @@
 
 .site-header__inner {
 	display: flex;
+	max-width: var(--container-global);
+	margin: 0 auto;
 	justify-content: center;
 	align-items: center;
 	width: 100%;

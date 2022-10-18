@@ -1,0 +1,127 @@
+.feature-panel {
+	// @extend .container;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// min-height: 100vh;
+	@include mq(medium) {
+		flex-direction: row;
+		// padding: var(--spacing-l);
+	}
+	&__item {
+		width: 100%;
+		padding: var(--spacing-xl);
+		@include mq(medium) {
+			width: 50%;
+			padding: var(--spacing-xl);
+		}
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		z-index: 1;
+		&--top {
+			align-items: flex-start;
+		}
+	}
+	// &__bkg-image {
+	// 	position: relative;
+	// 	background-color:  var(--color-primary);
+	// 	overflow: hidden;
+	// 	// margin-bottom: var(--spacing);
+	// 	@include mq(medium) {
+	// 		padding-top: var(--spacing-xl);
+	// 		padding-bottom: var(--spacing-xl);
+	// 		// margin-bottom: 0;
+	// 	}
+
+	// 	img {
+			
+	// 		@include mq(medium) {
+	// 			position: absolute;
+	// 			top: 50%;
+	// 			left: 50%;
+	// 			transform: translate(-50%, -50%);
+	// 			max-width: none;
+	// 			min-width: 100%;
+	// 			min-height: calc(100% + 2px);
+	// 		}
+	// 	}
+
+	// 	.feature-panel__item {
+
+	// 		@include mq(medium) {
+	// 			width: calc(100% / 2);
+	// 		}
+	// 		@include mq(large) {
+	// 			width: calc(100% / 3);
+	// 		}
+	// 	}
+
+	// 	.feature-panel__image {
+	// 		order: 1;
+	// 		padding: var(--spacing) var(--spacing) 0 var(--spacing);
+	// 		@include mq(medium) {
+	// 			order: 2;
+	// 			padding: 0 var(--spacing);
+	// 		}
+	// 	}
+
+	// 	.feature-panel__text {
+	// 		background-color: var(--color-primary);
+	// 		padding: var(--spacing);
+	// 		color: white;
+	// 		order: 2;
+	// 		@include mq(medium) {
+	// 			order: 1;
+	// 		}
+	// 	}
+	// 	+ .feature-panel {
+	// 		@include mq(medium) {
+	// 			padding-top: var(--spacing-l) !important;
+	// 		}
+	// 	}
+	// }
+	&__image {
+		// padding: var(--spacing) var(--spacing) 0 var(--spacing);
+		display: flex;
+		justify-content: center;
+		@include mq($until: medium) {
+			order: 2 !important;
+		}
+		&--left {
+			.feature-panel__text {
+				order: 1;
+				@include mq(medium) {
+					order: 2;
+				}
+			}
+		}
+		&--right {
+			.feature-panel__image {
+				@include mq(medium) {
+					order: 2;
+				}
+			}
+			.feature-panel__text {
+				order: 1;
+			}
+		}
+		&--bkg {
+			padding: 0;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	
+	+ .feature-panel {
+		padding-top: 0;
+	}
+	+ .feature-panel__bkg-image {
+		@include mq(medium) {
+			padding-top: var(--spacing-xl);
+		}
+	}
+}

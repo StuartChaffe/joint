@@ -77,13 +77,15 @@ function joint_allowed_block_types( $allowed_blocks ) {
 	return array(
 		'acf/custom-block-joint-1',
 		// 'acf/custom-block-joint-2',
-		'acf/custom-block-joint-3',
+		// 'acf/custom-block-joint-3',
 		// 'acf/custom-block-joint-4',
 		// 'acf/custom-block-joint-5',
 		// 'acf/custom-block-joint-6',
+		'acf/custom-block-joint-22',
 		
 		'core/paragraph',
 		'core/heading',
+		'core/button',
 		'core/list',
 		'core/image',
 	);

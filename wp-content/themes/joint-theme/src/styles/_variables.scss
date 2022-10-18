@@ -46,15 +46,17 @@
 	--border-radius: 16px;
 
 	--spacing-xxl: 3em;
-	--spacing-xl: 2em;
-	--spacing-l: 1.5em;
-	--spacing: 1em;
-	--spacing-s: 0.5em;
+	--spacing-xl: 120px;
+	--spacing-l: 80px;
+	--spacing: 40px;
+	--spacing-s: 20px;
 	--spacing-xs: 0.25em;
 
-	--container-width: 75rem;
-	--container-width-l: 100rem;
-	--content-width: 50rem;
+	--container-s: 800px;
+	--container: 1200px;
+	--container-l: 1430px;
+	--content-width: var(--container);
+	--container-global: 1800px;
 
 	@include mq(large) {
 		--font-size-h1: calc(3.2rem + 0.2vw);

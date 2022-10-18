@@ -3,6 +3,8 @@
 // =============================================================================
 
 .global-container {
+	max-width: var(--container-global);
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -12,12 +14,12 @@
 	margin: 0 auto;
 	padding: 0 1em;
 	width: 100%;
-	max-width: var(--container-width);
+	max-width: var(--container-global);
 }
 
 .main {
-	@extend .container;
-	max-width: var(--content-width);
+	// @extend .container;
+	max-width: var(--container);
 	margin-top: var(--spacing-l);
 	margin-bottom: var(--spacing-l);
 	flex: 1;
@@ -37,5 +39,31 @@
 	}
 	&--green {
 		background-color: var(--color-primary);
+		color: white;
+		h1, h2, h3, h4, h5, h6, p, ul li {
+			color: white;
+		}
+		.wp-block-button__link {
+			background-color: white;
+			color: var(--color-text-dark);
+		}
+	}
+}
+
+
+// Show and hide
+
+.hide {
+	display: none;
+}
+.hidemobile {
+	@include mq($until: medium) {
+		display: none !important;
+	}
+}
+
+.hidedesktop {
+	@include mq(medium) {
+		display: none !important;
 	}
 }

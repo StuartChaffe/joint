@@ -1,36 +1,78 @@
-.btn {
+.btn,
+input[type="button"],
+input[type="submit"],
+button,
+.wp-block-button__link,
+.wp-block-button__link:visited {
 	display: inline-block;
-	border-radius: var(--border-radius);
-	padding: 0 3rem;
-	border: 1px solid var(--color-grey);
-	color: var(--color-text-dark);
-	height: 40px;
-	line-height: 40px;
-	font-family: var(--display-family);
-	font-weight: var(--font-weight-bold);
-	font-size: var(--font-size);
+	border-radius: 100px;
+	padding: 0.5rem 1.8rem;
+	border: 0;
+	color: white;
+	font-size: 16px;
 	text-align: center;
 	cursor: pointer;
-	transition: all 0.1s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	background-color: var(--color-secondary);
 
 	&:hover, &:focus {
-		border-color: var(--color-grey-dark);
+		background-color:  var(--color-text-dark);
+		color: white;
+		// border-color: var(--color-grey-dark);
+		// color: var(--color-primary);
 		outline: 0;
-		color: var(--color-grey-dark);
 		text-decoration: none;
-		position: relative;
-		top: -1px;
-		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
 	}
+	a {
+		color: var(--color-text-dark);
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	+ .btn {
+		margin-left: 0.5rem;
+	}
+}
+// .wp-block-button__link {
+// 	background-color: transparent;
+// }
+.wp-block-button {
+	margin-top: var(--spacing);
 }
 
 .btn--primary {
-	background-color: var(--color-primary);
-	border: 1px solid var(--color-primary);
-	color: var(--color-text-reversed);
+	border: 2px solid white;
+	color: white;
 
 	&:hover, &:focus {
-		border-color: var(--color-primary);
+		border: 2px solid  var(--color-text-dark);
+	}
+}
+.btn--block {
+	background-color: white;
+	border: 2px solid white;
+	color: var(--color-primary);
+
+	&:hover, &:focus {
+		border: 2px solid  var(--color-text-dark);
+	}
+	a {
+		color: var(--color-primary);
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+p + p .btn {
+	margin-top: 1.5rem;
+}
+.link {
+	text-decoration: underline;
+	&:hover {
 		color: var(--color-primary);
 	}
 }

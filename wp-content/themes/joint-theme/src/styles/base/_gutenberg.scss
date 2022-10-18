@@ -21,7 +21,7 @@
 
 /* Post title width */
 .editor-post-title__block.wp-block {
-	max-width: var(--content-width);
+	max-width: var(--container-global);
 
 	/* Post title styling */
 	.editor-post-title__input {
@@ -30,7 +30,7 @@
 
 /* Main column width */
 .wp-block {
-    max-width: var(--content-width);
+    max-width: var(--container-global);
 
 	/* Wide column width */
 	&[data-align="wide"],

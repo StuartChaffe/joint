@@ -42,10 +42,12 @@
 	}
 
 	&__ticker {
+		position: relative;
 		text-align: center;
 		background-color: var(--color-secondary);
 		color: white;
 		height: 30px;
+		overflow: hidden;
 
 		display: flex;
 		align-items: center;

@@ -142,7 +142,7 @@ body:before {
   --color-instagram: #262626;
   --color-youtube: #cc181e;
   --color-linkedin: #0077B5;
-  --body-background-color: #fff;
+  --body-background-color: #F7F7F6;
   --border-radius: 16px;
   --spacing-xxl: 3em;
   --spacing-xl: 120px;
@@ -478,7 +478,6 @@ div[data-type="core/button"] div[data-block] {
 
 .global-container {
   max-width: var(--container-global);
-  background-color: #F7F7F6;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -844,10 +843,12 @@ p + p .btn {
   display: block;
 }
 .banner__ticker {
+  position: relative;
   text-align: center;
   background-color: var(--color-secondary);
   color: white;
   height: 30px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;

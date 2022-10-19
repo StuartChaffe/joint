@@ -6,6 +6,7 @@
             "key": "field_634eb08fde59b",
             "label": "Background colour",
             "name": "bkg_colour",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -18,7 +19,8 @@
             "choices": {
                 "bkg--white": "White",
                 "bkg--grey": "Grey",
-                "bkg--green": "Green"
+                "bkg--green": "Green",
+                "bkg--pink": "Pink"
             },
             "default_value": false,
             "return_format": "value",
@@ -32,6 +34,7 @@
             "key": "field_62bdf7753587d",
             "label": "Image",
             "name": "image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -56,6 +59,7 @@
             "key": "field_62bdf7853587e",
             "label": "Image position",
             "name": "image_position",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -89,6 +93,7 @@
             "key": "field_634eb37bbb6f3",
             "label": "Image type",
             "name": "image_type",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -114,6 +119,7 @@
             "key": "field_634edc67473c9",
             "label": "Text position",
             "name": "text_position",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -154,5 +160,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666174542
+    "modified": 1666179324
 }

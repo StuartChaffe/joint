@@ -12,7 +12,7 @@ $image			= get_field('image');
 $imagepos		= get_field('image_position');
 $textpos		= get_field('text_position');
 $imagetype		= get_field('image_type');
-$allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button' );
+$allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button', 'core/list' );
 $bkg			= get_field('bkg_colour');
 ?>
 <section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?>">

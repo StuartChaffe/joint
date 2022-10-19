@@ -24,6 +24,13 @@
 		&--top {
 			align-items: flex-start;
 		}
+
+		ul {
+			list-style-type: disc;
+			li {
+				margin-bottom: 1rem;
+			}
+		}
 	}
 	// &__bkg-image {
 	// 	position: relative;

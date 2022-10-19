@@ -131,7 +131,7 @@ body:before {
   --color-primary: #419884;
   --color-secondary: #FF701F;
   --color-tertiary: #FFBEB8;
-  --color-quaternary: #FFBEB8;
+  --color-quaternary: #FBDBD8;
   --color-text-base: #020000;
   --color-text-dark: #000;
   --color-text-reversed: #fff;
@@ -608,6 +608,9 @@ div[data-type="core/button"] div[data-block] {
 }
 .bkg--grey {
   background-color: var(--color-grey);
+}
+.bkg--pink {
+  background-color: var(--color-quaternary);
 }
 .bkg--green {
   background-color: var(--color-primary);
@@ -1571,6 +1574,12 @@ body.nav-open {
 }
 .feature-panel__text--top {
   align-items: flex-start;
+}
+.feature-panel__text ul {
+  list-style-type: disc;
+}
+.feature-panel__text ul li {
+  margin-bottom: 1rem;
 }
 .feature-panel__image {
   display: flex;

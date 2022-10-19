@@ -27,7 +27,7 @@ function origin_cpts() {
 	$single_name    = "Property";
 	$plural_name    = "Accommodation";
 	$icon           = "dashicons-admin-home";
-	$gutenberg_enabled	= true;
+	$gutenberg_enabled	= false;
 
 	$post_type_options = array(
 	    'label'                 => $single_name,

@@ -36,10 +36,10 @@ function origin_taxonomies() {
 
 
 
-	$taxonomy_name		= "department";
-	$single_name		= "Department";
-	$plural_name		= "Departments";
-	$post_type			= "team";
+	$taxonomy_name		= "location";
+	$single_name		= "Location";
+	$plural_name		= "Locations";
+	$post_type			= "accommodation";
 	$gutenberg_enabled	= false;
 
 	$labels = array(
@@ -53,7 +53,7 @@ function origin_taxonomies() {
 	    'update_item'       => 'Update ' . $single_name,
 	    'add_new_item'      => 'Add New ' . $single_name,
 	    'new_item_name'     => 'New ' . $single_name . ' Name',
-	    'menu_name'         => $single_name
+	    'menu_name'         => $plural_name
 	);
 
 	$args = array(
@@ -65,5 +65,5 @@ function origin_taxonomies() {
 		'show_in_rest'      => $gutenberg_enabled,
 	    'rewrite'           => array( 'slug' => '' ),
 	);
-	// register_taxonomy( $taxonomy_name, $post_type, $args );
+	register_taxonomy( $taxonomy_name, $post_type, $args );
 }

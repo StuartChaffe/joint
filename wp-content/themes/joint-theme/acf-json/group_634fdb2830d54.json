@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_634fdbec35928",
-            "label": "Property details",
+            "label": "Property Details",
             "name": "property_details",
             "aria-label": "",
             "type": "group",
@@ -149,5 +149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666178315
+    "modified": 1666190189
 }

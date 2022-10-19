@@ -1,4 +1,4 @@
-<header class="site-header site-header__down">
+<header class="site-header">
 	<div class="site-header__inner">
 		<div class="site-header__contact">Call <a href="tel:01273 257 141">01273 257 141</a> to book now!</div>
 

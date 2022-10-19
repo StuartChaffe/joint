@@ -1534,8 +1534,15 @@ body.nav-open {
 }
 .banner__image {
   margin-top: auto;
+  margin-bottom: var(--spacing-s);
   display: block;
 }
+.banner__ticker {
+  text-align: center;
+  background-color: var(--color-secondary);
+  color: white;
+}
+
 .feature-panel {
   display: flex;
   flex-direction: column;

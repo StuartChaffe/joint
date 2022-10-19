@@ -6,6 +6,7 @@
             "key": "field_634fcde1020b2",
             "label": "Image",
             "name": "banner_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -30,6 +31,7 @@
             "key": "field_634fd4cfee0f3",
             "label": "Mobile image",
             "name": "banner_image_mobile",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -49,6 +51,26 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_634fd9aa5e134",
+            "label": "Ticker content",
+            "name": "ticker_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -69,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666176230
+    "modified": 1666177485
 }

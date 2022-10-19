@@ -26,6 +26,7 @@
 
 	&__image {
 		margin-top: auto;
+		margin-bottom: var(--spacing-s);
 		// position: absolute;
 		// z-index: 0;
 		// top: 50%;
@@ -38,5 +39,11 @@
 		@include mq(medium) {
 			// display: none;
 		}
+	}
+
+	&__ticker {
+		text-align: center;
+		background-color: var(--color-secondary);
+		color: white;
 	}
 }

@@ -30,6 +30,8 @@ $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button' );
 	<?php if ( $image['large'] ) { ?><img loading="lazy" class="banner__image hidemobile" src="<?php echo $image['large']['url']; ?>" alt="<?php echo $image['large']['alt']; ?>" /><?php } ?>
 	<?php if ( $image['mobile'] ) { ?><img loading="lazy" class="banner__image hidedesktop" src="<?php echo $image['mobile']['url']; ?>" alt="<?php echo $image['mobile']['alt']; ?>" /><?php } ?>
 </section>
-<div class="banner__ticker">
-	<?php if ( $ticker ) { ?><?php echo $ticker; ?><?php } ?>
-</div>
+<?php if ( $ticker ) { ?>
+	<div class="banner__ticker">
+		<p class="msg"><span><?php echo $ticker; ?></span></p>
+	</div>
+<?php } ?>

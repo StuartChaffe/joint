@@ -1513,6 +1513,14 @@ body.nav-open {
   margin: 0 1rem 0 0;
 }
 
+.accommodation {
+  background: grey;
+  display: flex;
+}
+.accommodation-item {
+  border: 2px solid green;
+}
+
 .accordion {
   max-width: var(--content-width);
   margin-top: var(--spacing-xl);

@@ -76,6 +76,7 @@ function joint_allowed_block_types( $allowed_blocks ) {
  
 	return array(
 		'acf/custom-block-joint-1',
+		'acf/custom-block-joint-121',
 		'acf/custom-block-joint-2',
 		// 'acf/custom-block-joint-3',
 		// 'acf/custom-block-joint-4',

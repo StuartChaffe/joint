@@ -27,6 +27,7 @@
 		background-size: cover;
 		background-position: center center;
 		color: white;
+		font-weight: var(--font-weight-bold);
 		overflow: hidden;
 		@include mq(medium) {
 			height: calc(25vw - 1rem);

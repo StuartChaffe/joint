@@ -610,7 +610,7 @@ div[data-type="core/button"] div[data-block] {
   width: 100%;
 }
 
-.global-container, .site-footer__inner {
+.global-container {
   max-width: var(--container-global);
   margin: 0 auto;
   display: flex;
@@ -1327,11 +1327,28 @@ p + p .btn {
 .site-footer {
   margin-top: auto;
   background-color: var(--color-grey);
-  padding: var(--spacing);
+  padding: var(--spacing-l) 0;
+  font-size: var(--font-size-small);
+}
+.site-footer__left, .site-footer__right {
+  display: flex;
+}
+.site-footer__left {
+  flex-direction: column;
+}
+.site-footer__links ul {
+  margin: 0 0 1rem 0;
+  padding-left: 0;
+}
+.site-footer__links ul li a {
+  color: var(--color-text-base);
 }
 
 .site-footer__inner {
+  flex-direction: row;
   display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl);
 }
 
 .site-footer p {
@@ -1449,15 +1466,12 @@ body.nav-open {
 
 .social-links {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .social-links__item {
-  margin: 0 1rem;
-}
-
-.social-links__link {
-  color: white;
+  margin: 0 1rem 0 0;
 }
 
 .accordion {

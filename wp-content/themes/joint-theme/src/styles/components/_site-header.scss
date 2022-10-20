@@ -14,7 +14,7 @@
 	}	
 	&__contact {
 		display: none;
-		background-color: white;
+		background-color: var(--color-grey-light);
 		border: 1px solid var(--color-text-base);
 		color: var(--color-text-base);
 		font-size: var(--font-size-small);
@@ -23,11 +23,15 @@
 		@include mq(medium) {
 			display: block;
 		}
+		&:hover {
+			background-color: white;
+		}
 
 		a {
 			color: var(--color-text-base);
 			&:hover {
 				color: var(--color-primary);
+				text-decoration: none;
 			}
 		}
 	}
@@ -131,12 +135,15 @@
 
 .site-header__nav ul {
 	display: flex;
-	background-color: white;
+	background-color: var(--color-grey-light);
 	margin: 0;
 	font-size: var(--font-size-small);
 	padding: 0rem 1rem;
 	border: 1px solid var(--color-text-base);
 	border-radius: 40px;
+	&:hover {
+		background-color: white;
+	}
 }
 
 .site-header__nav li {

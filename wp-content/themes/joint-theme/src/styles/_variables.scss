@@ -22,7 +22,7 @@
 
 	--color-grey-dark: #6a6a6a;
 	--color-grey: #E7E8E3;
-	--color-grey-light: #efefef;
+	--color-grey-light: #F7F7F6;
 
 	--color-primary: #419884;
 	--color-secondary: #FF701F;
@@ -41,7 +41,7 @@
 	--color-youtube: #cc181e;
 	--color-linkedin: #0077B5;
 
-	--body-background-color: #F7F7F6;
+	--body-background-color: var(--color-grey-light);
 
 	--border-radius: 16px;
 

@@ -78,7 +78,7 @@ div[data-type="core/button"] div[data-block] {
 
 .block-editor-default-block-appender .block-editor-inserter {
 	width: 100%;
-
+	top: 20px;
 }
 .block-editor-block-list__block .block-list-appender.block-list-appender {
 	width: 100%;
@@ -86,7 +86,7 @@ div[data-type="core/button"] div[data-block] {
 }
 .block-editor-block-list__block .block-list-appender .block-editor-inserter__toggle.components-button.has-icon, .block-editor-block-list__block .block-list-appender .block-list-appender__toggle {
 	width: 100%;
-	background-color: var(--color-tertiary);
+	// background-color: var(--color-tertiary);
 }
 
 .block-editor-default-block-appender .block-editor-inserter__toggle.components-button.has-icon {

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body:before {
+  display: none;
   background-color: #fcf8e3;
   border-bottom: 1px solid #fbeed5;
   border-left: 1px solid #fbeed5;
@@ -54,6 +55,7 @@ body:before {
   }
 }
 body:before {
+  display: none;
   background-color: #fcf8e3;
   border-bottom: 1px solid #fbeed5;
   border-left: 1px solid #fbeed5;

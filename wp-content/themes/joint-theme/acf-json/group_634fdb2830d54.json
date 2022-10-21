@@ -64,10 +64,10 @@
                 },
                 {
                     "key": "field_634fdb9135926",
-                    "label": "PPCW",
+                    "label": "Price",
                     "name": "price",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -76,20 +76,18 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
+                    "default_value": "£0 pppw",
+                    "maxlength": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
                     "append": ""
                 },
                 {
                     "key": "field_634fdbb635927",
-                    "label": "PPCW (with bills)",
-                    "name": "ppcw_bills",
+                    "label": "Price (with bills)",
+                    "name": "price_bills",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -98,11 +96,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
+                    "default_value": "£0 pppw",
+                    "maxlength": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
                     "append": ""
                 },
@@ -125,6 +121,195 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_635265f95cad9",
+                    "label": "Available from",
+                    "name": "available_from",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_635269a56acd0",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_635267b327f06",
+            "label": "Amenities",
+            "name": "amenities",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_635267cf27f07",
+                    "label": "Title",
+                    "name": "amenity_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_635267b327f06"
+                },
+                {
+                    "key": "field_635267e827f08",
+                    "label": "Amenity",
+                    "name": "amenity",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6352680b27f09",
+                            "label": "",
+                            "name": "amenity",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_635267e827f08"
+                        },
+                        {
+                            "key": "field_635268f723e50",
+                            "label": "Distance",
+                            "name": "amenity_distance",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_635267e827f08"
+                        }
+                    ],
+                    "parent_repeater": "field_635267b327f06"
+                }
+            ]
+        },
+        {
+            "key": "field_635269f5483ca",
+            "label": "Features",
+            "name": "features",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_635269fe483cb",
+                    "label": "Features (short)",
+                    "name": "features_short",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
                 }
             ]
         }
@@ -149,5 +334,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666190189
+    "modified": 1666348574
 }

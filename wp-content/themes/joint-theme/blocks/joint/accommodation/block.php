@@ -25,6 +25,7 @@ $accommodation = get_field( 'select_location');
 	));
 ?>
 <?php if ($properties->have_posts()) { ?>
+	<div class="accommodation">
 	<?php while($properties->have_posts()) : $properties->the_post(); ?>
 	<?php
 		$details = get_field('property_details', get_the_id());
@@ -40,52 +41,65 @@ $accommodation = get_field( 'select_location');
 		$features = get_field('features', get_the_id());
 		$featuresshort = $features['features_short'];
 	?>
-		<a href="<?php esc_url(the_permalink() ); ?>" >
-		<?php if( get_the_post_thumbnail() ) { ?>	
-			<?php echo get_the_post_thumbnail(); ?>
-		<?php } else { ?>
-			<img src="<?php echo get_template_directory_uri(); ?>/src/images/property-default-thumb.png" alt="Property default image" />
-		<?php } ?>
-
-			<?php the_title(); ?>, 
-			<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?>
-				<?php echo $location->name ; ?>
+		<div class="accommodation__item">
+			<div class="accommodation__image">
+			<?php if( get_the_post_thumbnail() ) { ?>	
+				<?php echo get_the_post_thumbnail(); ?>
+			<?php } else { ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/src/images/property-default-thumb.png" alt="Property default image" />
 			<?php } ?>
-			, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
-			<br />
+				BENEFIT
+			</div>
 
-			<?php if($rooms) { ?><?php echo $rooms; ?> room<?php if($rooms > '1') { echo 's'; } ?> remaining<?php } ?><br />
-			<?php if($available) { ?><?php echo $available; ?> bedroom house<?php } ?><br />
+			<div class="accommodation__content">
+				<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 
+					<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
+				</h4>
+				<div class="accommodation__details">
+					<div>
+						<div class="accommodation__rooms">
+							<?php if($rooms) { ?><strong><?php echo $rooms; ?> room<?php if($rooms > '1') { echo 's'; } ?> remaining<?php } ?></strong><br />
+							<?php if($available) { ?><?php echo $available; ?> bedroom house<?php } ?><br />
+						</div>
+						<div class="accommodation__amenities">
+						<?php if( have_rows('amenities', get_the_id()) ): ?>
+							<?php while( have_rows('amenities', get_the_id()) ): the_row(); 
+								$title = get_sub_field('amenity_title');
+							?>
+								<?php if( have_rows('amenity', get_the_id()) ): ?>
+									<?php while( have_rows('amenity', get_the_id()) ): the_row(); 
+										$amenity = get_sub_field('amenity');
+										$distance = get_sub_field('amenity_distance');
+									?>
+									<div class="accommodation__amenities-item">
+										<p><strong><?php echo $amenity; ?></strong><br />
+										<?php echo $distance; ?> </p>
+									</div>
+									<?php endwhile; ?>
+								<?php endif; ?>
+							<?php endwhile; ?>
+						<?php endif; ?>
+						</div>
+						<?php if($availabledate) { ?><strong>Available</strong><br />
+							<?php echo $availabledate; ?><?php } ?>
+					</div>
+					<div>
+						<div class="accommodation__price">
+							<?php if($price) { ?><strong><?php echo $price; ?><?php } ?></strong><br />
+							<?php if($pricebills) { ?>Inc. bills: <?php echo $pricebills; ?><?php } ?>
+						</div>
 
-			<?php if($price) { ?><?php echo $price; ?><?php } ?><br />
-			<?php if($pricebills) { ?>Inc. bills: <?php echo $pricebills; ?><?php } ?><br />
-			<?php if($availabledate) { ?>Available from <?php echo $availabledate; ?><?php } ?><br />
-
-			<?php if($featuresshort) { ?><strong>Features:</strong> <?php echo $featuresshort; ?><?php } ?> <br />
-
-
-			<?php if( have_rows('amenities', get_the_id()) ): ?>
-				<?php while( have_rows('amenities', get_the_id()) ): the_row(); 
-					$title = get_sub_field('amenity_title');
-				?>
-					<strong><?php echo $title; ?> </strong> <br />
-					<?php if( have_rows('amenity', get_the_id()) ): ?>
-						<?php while( have_rows('amenity', get_the_id()) ): the_row(); 
-							$amenity = get_sub_field('amenity');
-							$distance = get_sub_field('amenity_distance');
-						?>
-							<strong><?php echo $amenity; ?> </strong>
-							<?php echo $distance; ?> 
-							<br />
-						<?php endwhile; ?>
-					<?php endif; ?>
-					
-				<?php endwhile; ?>
-			<?php endif; ?>
-
-
-			
-
-		</a>
+						<?php if($featuresshort) { ?>
+							<div class="accommodation__features">
+								<strong>Features</strong>
+								<?php echo $featuresshort; ?>
+							</div>
+						<?php } ?>
+					</div>	
+				</div>
+				<a href="<?php esc_url(the_permalink() ); ?>" class="btn">Find out more</a>
+			</div>
+		</div>
 	<?php endwhile; ?>
+	</div>
 <?php } ?>

@@ -25,10 +25,6 @@ $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button' );
 		<?php if ( $image ) { ?><img loading="lazy" class="banner__image<?php if ( $mobileimage ) { ?> hidemobile<?php } ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /><?php } ?>
 		<?php if ( $mobileimage ) { ?><img loading="lazy" class="banner__image hidedesktop" src="<?php echo $mobileimage['url']; ?>" alt="<?php echo $mobileimage['alt']; ?>" /><?php } ?>
 	</div>
-	
-
-	<?php if ( $image['large'] ) { ?><img loading="lazy" class="banner__image hidemobile" src="<?php echo $image['large']['url']; ?>" alt="<?php echo $image['large']['alt']; ?>" /><?php } ?>
-	<?php if ( $image['mobile'] ) { ?><img loading="lazy" class="banner__image hidedesktop" src="<?php echo $image['mobile']['url']; ?>" alt="<?php echo $image['mobile']['alt']; ?>" /><?php } ?>
 </section>
 <?php if ( $ticker ) { ?>
 	<div class="banner__ticker">

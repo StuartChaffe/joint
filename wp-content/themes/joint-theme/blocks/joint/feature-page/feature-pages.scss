@@ -23,7 +23,7 @@
 		margin: 0 0.5rem var(--spacing-s) 0.5rem;
 		height: 150px;
 		max-height: calc(var(--container) / 4 - 1.5rem);
-		border-radius: 20px;
+		border-radius: var(--border-radius);
 		background-size: cover;
 		background-position: center center;
 		color: white;

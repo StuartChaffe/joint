@@ -1,0 +1,57 @@
+.property {
+	&__title {
+		@extend .container;
+		text-align: center;
+		padding-top: var(--spacing-xxl);
+		padding-bottom: var(--spacing);
+	}
+	&__details {
+		@extend .container;
+		display: flex;
+	}
+	&__content,
+	&__contact {
+		flex: 1 1 0;
+		width: 50%;
+	}
+	&__content {
+		padding-right: var(--spacing);
+		margin-bottom: var(--spacing-l);
+	}
+	&__contact {
+		padding-left: var(--spacing);
+	}
+
+	&__rooms {
+		display: flex;
+		> div {
+			// width: 50%;
+			// flex: 1 1 0;
+
+			&:last-child {
+				padding-left: var(--spacing-s);
+				margin-left: auto;
+			}
+		}
+	}
+
+	&__item {
+		border-top: 0.5px solid black;
+		padding: var(--spacing) 0;
+		&:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+		&:last-child {
+			border-bottom: 0.5px solid black;
+		}
+	}
+	&__amenities {
+		&-item {
+			margin-bottom: var(--spacing-s);
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

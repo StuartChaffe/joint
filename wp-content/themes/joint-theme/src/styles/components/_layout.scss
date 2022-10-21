@@ -53,6 +53,22 @@
 	}
 }
 
+.text {
+	&--orange {
+		color: var(--color-secondary);
+	}
+	&--green {
+		color: var(--color-primary);
+	}
+	&--body {
+		font-family: var(--body-family);
+	}
+
+	&--bold {
+		font-weight: var(--font-weight-bold);
+	}
+}
+
 
 // Show and hide
 

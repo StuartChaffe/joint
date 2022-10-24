@@ -53,19 +53,17 @@ $accommodation = get_field( 'select_location');
 
 			<div class="accommodation__content">
 				<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 
-					<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
+					<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?><?php echo $location->name ; ?><?php } ?>
 				</h4>
 				<div class="accommodation__details">
 					<div>
 						<div class="accommodation__rooms">
-							<?php if($rooms) { ?><strong><?php echo $rooms; ?> room<?php if($rooms > '1') { echo 's'; } ?> remaining<?php } ?></strong><br />
-							<?php if($available) { ?><?php echo $available; ?> bedroom house<?php } ?><br />
+							<?php if($rooms) { ?><p><strong><?php echo $rooms; ?> room<?php if($rooms > '1') { echo 's'; } ?> remaining<?php } ?></strong></p>
+							<?php if($available) { ?><p><?php echo $available; ?> bedroom house</p><?php } ?>
 						</div>
 						<div class="accommodation__amenities">
 						<?php if( have_rows('amenities', get_the_id()) ): ?>
-							<?php while( have_rows('amenities', get_the_id()) ): the_row(); 
-								$title = get_sub_field('amenity_title');
-							?>
+							<?php while( have_rows('amenities', get_the_id()) ): the_row(); ?>
 								<?php if( have_rows('amenity', get_the_id()) ): ?>
 									<?php while( have_rows('amenity', get_the_id()) ): the_row(); 
 										$amenity = get_sub_field('amenity');
@@ -80,18 +78,18 @@ $accommodation = get_field( 'select_location');
 							<?php endwhile; ?>
 						<?php endif; ?>
 						</div>
-						<?php if($availabledate) { ?><strong>Available</strong><br />
-							<?php echo $availabledate; ?><?php } ?>
+						<?php if($availabledate) { ?><p><strong>Available</strong><br/>
+							<?php echo $availabledate; ?></p><?php } ?>
 					</div>
 					<div>
 						<div class="accommodation__price">
-							<?php if($price) { ?><strong><?php echo $price; ?><?php } ?></strong><br />
-							<?php if($pricebills) { ?>Inc. bills: <?php echo $pricebills; ?><?php } ?>
+							<?php if($price) { ?><p><strong><?php echo $price; ?><?php } ?></strong></p>
+							<?php if($pricebills) { ?><p>Inc. bills: <?php echo $pricebills; ?></p><?php } ?>
 						</div>
 
 						<?php if($featuresshort) { ?>
 							<div class="accommodation__features">
-								<strong>Features</strong>
+								<p><strong>Features</strong></p>
 								<?php echo $featuresshort; ?>
 							</div>
 						<?php } ?>

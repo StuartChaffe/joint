@@ -31,8 +31,12 @@
 
 		ul {
 			list-style-type: disc;
+			margin-bottom: 0;
 			li {
 				margin-bottom: 1rem;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -99,6 +103,8 @@
 		display: flex;
 		justify-content: center;
 		@include mq($until: medium) {
+			padding-top: 0;
+			padding-bottom: 0;
 			order: 2 !important;
 		}
 		&--left {

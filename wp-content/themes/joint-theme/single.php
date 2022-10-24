@@ -16,6 +16,8 @@
 	$features = get_field('features', get_the_id());
 	$featuresshort = $features['features_short'];
 
+	$images = get_field('images', get_the_id());
+
 ?>
 
 	<article id="content" class="property">
@@ -23,6 +25,16 @@
 			<h1><?php the_title(); ?>, <br />
 			<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?></h1>
 		</div>
+
+		<?php if( $images ): ?>
+		<div class="gallery">
+			<?php foreach( $images as $image ): ?>
+				<div class="gallery--item">
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				</div>
+			<?php endforeach; ?>
+		</div>
+		<?php endif; ?>
 
 		<div class="property__details">
 			<div class="property__content">

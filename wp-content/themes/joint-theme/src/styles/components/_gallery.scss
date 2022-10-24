@@ -1,0 +1,12 @@
+.gallery {
+    @extend .global-container;
+    margin: 0 var(--spacing-s) var(--spacing-xl) var(--spacing-s);
+    border-radius: var(--border-radius);
+
+    &--item {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}

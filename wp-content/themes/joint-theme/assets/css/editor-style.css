@@ -643,6 +643,20 @@ div[data-type="core/button"] div[data-block] {
 .property__amenities-item p {
   margin-bottom: 0;
 }
+.property__features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-s);
+}
+.property__features-list-item {
+  display: flex;
+  width: 50%;
+  margin-bottom: var(--spacing-s);
+}
+.property__features-list-item img {
+  width: 25px;
+  margin-right: 10px;
+}
 
 .icon {
   display: inline-block;

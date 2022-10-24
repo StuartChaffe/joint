@@ -11,22 +11,17 @@
 	$pricebills = $details['price_bills'];
 	$desc = $details['description'];
 
-	// $amenities = get_field('amenities', get_the_id()); var_dump($amenities);
-
-	$features = get_field('features', get_the_id());
-	$featuresshort = $features['features_short'];
-
 	$images = get_field('images', get_the_id());
-
+	$locations = get_the_terms( get_the_ID(), 'location' );
+	$features = get_the_terms( get_the_ID(), 'features' );
 ?>
 
 	<article id="content" class="property">
 		<div class="property__title">
 			<h1><?php the_title(); ?>, <br />
-			<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?></h1>
+			<?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?></h1>
 		</div>
-
-		<?php if( $images ): ?>
+		<?php if($images) { ?>
 		<div class="gallery">
 			<?php foreach( $images as $image ): ?>
 				<div class="gallery--item">
@@ -34,13 +29,13 @@
 				</div>
 			<?php endforeach; ?>
 		</div>
-		<?php endif; ?>
+		<?php } ?>
 
 		<div class="property__details">
 			<div class="property__content">
 				<div class="property__item">	
 					<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 
-						<?php foreach ( get_the_terms( get_the_ID(), 'location' ) as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
+						<?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
 					</h4>
 				</div>
 
@@ -62,13 +57,13 @@
 				</div>
 
 				<div class="property__item property__amenities">
-				<?php if( have_rows('amenities', get_the_id()) ): ?>
+				<?php if( have_rows('amenities', get_the_id()) ) { ?>
 					<?php while( have_rows('amenities', get_the_id()) ): the_row(); 
 						$title = get_sub_field('amenity_title');
 					?>
 					<div class="property__amenities-item">
 						<?php if($title) { ?><strong><?php echo $title; ?></strong> <br /><?php } ?>
-						<?php if( have_rows('amenity', get_the_id()) ): ?>
+						<?php if( have_rows('amenity', get_the_id()) ) { ?>
 							<?php while( have_rows('amenity', get_the_id()) ): the_row(); 
 								$amenity = get_sub_field('amenity');
 								$distance = get_sub_field('amenity_distance');
@@ -77,10 +72,10 @@
 								<p><?php echo $amenity; ?> - <?php echo $distance; ?> </p>
 							
 							<?php endwhile; ?>
-						<?php endif; ?>
+						<?php } ?>
 					</div>
 					<?php endwhile; ?>
-				<?php endif; ?>
+				<?php } ?>
 				</div>
 
 				<?php if($desc) { ?>
@@ -92,9 +87,21 @@
 				<div class="property__item">
 					IN THIS PROPERTY
 				</div>
+				<?php if($features) { ?>
 				<div class="property__item">
-					FEATURES
+					<p><strong>Features</strong></p>
+					<div class="property__features-list">
+					<?php foreach ( $features as $feature ) { 
+						$taximage = get_field('taxonomy_image', $feature );
+					?>
+						<div class="property__features-list-item">
+							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+							<p><?php echo $feature->name ; ?></p>
+						</div>
+					<?php } ?>
+					</div>
 				</div>
+				<?php } ?>
 				<div class="property__item">
 					IN THIS PROPERTY
 				</div>

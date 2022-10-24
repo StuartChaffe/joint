@@ -69,4 +69,20 @@
 			}
 		}
 	}
+	&__features-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: var(--spacing-s);
+		
+		&-item {
+			display: flex;
+			width: 50%;
+			margin-bottom: var(--spacing-s);
+
+			img {
+				width: 25px;
+				margin-right: 10px;
+			}
+		}
+	}
 }

@@ -1,12 +1,15 @@
 .gallery {
-    @extend .global-container;
-    margin: 0 var(--spacing-s) var(--spacing-xl) var(--spacing-s);
-    border-radius: var(--border-radius);
+	@extend .global-container;
+	margin: 0 var(--spacing-s) var(--spacing-s) var(--spacing-s);
+	border-radius: var(--border-radius);
+	@include mq(medium) {
+		margin: 0 var(--spacing-s) var(--spacing-xl) var(--spacing-s);
+	}
 
-    &--item {
-        width: 100%;
-        img {
-            width: 100%;
-        }
-    }
+	&--item {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
 }

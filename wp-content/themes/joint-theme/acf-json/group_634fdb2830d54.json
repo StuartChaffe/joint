@@ -1,6 +1,6 @@
 {
     "key": "group_634fdb2830d54",
-    "title": "Property details",
+    "title": "Property Details",
     "fields": [
         {
             "key": "field_634fdbec35928",
@@ -334,5 +334,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666348574
+    "modified": 1666601915
 }

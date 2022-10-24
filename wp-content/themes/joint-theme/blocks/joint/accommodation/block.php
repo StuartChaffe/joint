@@ -35,8 +35,7 @@ $accommodation = get_field( 'select_location');
 		$availabledate = $details['available_from'];
 		$price = $details['price'];
 		$pricebills = $details['price_bills'];
-
-		// $amenities = get_field('amenities', get_the_id()); var_dump($amenities);
+		$shortdesc = $details['short_description'];
 
 		$features = get_field('features', get_the_id());
 		$featuresshort = $features['features_short'];
@@ -87,10 +86,9 @@ $accommodation = get_field( 'select_location');
 							<?php if($pricebills) { ?><p>Inc. bills: <?php echo $pricebills; ?></p><?php } ?>
 						</div>
 
-						<?php if($featuresshort) { ?>
+						<?php if($shortdesc) { ?>
 							<div class="accommodation__features">
-								<p><strong>Features</strong></p>
-								<?php echo $featuresshort; ?>
+								<?php echo $shortdesc; ?>
 							</div>
 						<?php } ?>
 					</div>	

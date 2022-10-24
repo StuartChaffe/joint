@@ -653,7 +653,8 @@ div[data-type="core/button"] div[data-block] {
   width: 50%;
   margin-bottom: var(--spacing-s);
 }
-.property__features-list-item img {
+.property__features-list-item img,
+.property__features-list-item .icon {
   width: 25px;
   margin-right: 10px;
 }

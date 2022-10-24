@@ -11,6 +11,14 @@
 	$pricebills = $details['price_bills'];
 	$desc = $details['description'];
 
+	$floors = $details['floors'];
+	$bathrooms = $details['bathrooms'];
+	$livingrooms = $details['living_rooms'];
+	$wc = $details['wc'];
+	$separatewc = $details['separate_wc'];
+	$garden = $details['garden'];
+	$kitchen = $details['kitchen'];
+
 	$images = get_field('images', get_the_id());
 	$locations = get_the_terms( get_the_ID(), 'location' );
 	$features = get_the_terms( get_the_ID(), 'features' );
@@ -85,7 +93,16 @@
 				<?php } ?>
 
 				<div class="property__item">
-					IN THIS PROPERTY
+					<p><strong>In this property</strong></p>
+					<div class="property__features-list">
+						<?php if($floors) { ?><div class="property__features-list-item"><?php echo get_icon('floors'); ?> <p><?php echo $floors; ?> floor<?php if($floors > '1') { echo 's'; } ?></p></div><?php } ?>
+						<?php if($bathrooms) { ?><div class="property__features-list-item"><?php echo get_icon('bathrooms'); ?> <p><?php echo $bathrooms; ?> bathroom<?php if($bathrooms > '1') { echo 's'; } ?></p></div><?php } ?>
+						<?php if($livingrooms) { ?><div class="property__features-list-item"><?php echo get_icon('livingrooms'); ?> <p><?php echo $livingrooms; ?> living room<?php if($livingrooms > '1') { echo 's'; } ?></p></div><?php } ?>
+						<?php if($wc) { ?><div class="property__features-list-item"><?php echo get_icon('wc'); ?> <p><?php echo $wc; ?> WC<?php if($wc > '1') { echo 's'; } ?></p></div><?php } ?>
+						<?php if($separatewc) { ?><div class="property__features-list-item"><?php echo get_icon('wc'); ?> <p><?php echo $separatewc; ?> separate WC<?php if($separatewc > '1') { echo 's'; } ?></p></div><?php } ?>
+						<?php if($garden) { ?><div class="property__features-list-item"><?php echo get_icon('gardens'); ?> <p><?php echo $garden; ?> garden<?php if($garden > '1') { echo 's'; } ?></p></div><?php } ?>
+						<?php if($kitchen) { ?><div class="property__features-list-item"><?php echo get_icon('kitchens'); ?> <p><?php echo $kitchen; ?> kitchen<?php if($kitchen > '1') { echo 's'; } ?></p></div><?php } ?>
+					</div>
 				</div>
 				<?php if($features) { ?>
 				<div class="property__item">

@@ -652,7 +652,7 @@ div[data-type="core/button"] div[data-block] {
 }
 .property__benefits-item {
   display: flex;
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-xs);
   align-items: center;
 }
 .property__benefits-item:last-child {
@@ -663,7 +663,7 @@ div[data-type="core/button"] div[data-block] {
 }
 .property__benefits-item img,
 .property__benefits-item .icon {
-  width: 25px;
+  width: 25px !important;
   margin-right: 10px;
 }
 .property__features-list {
@@ -862,6 +862,12 @@ p + p .btn {
 .accommodation__image img {
   width: 100%;
   border-radius: var(--border-radius);
+}
+.accommodation__image .property__benefits {
+  margin-top: var(--spacing);
+}
+.accommodation__image .property__benefits img {
+  border-radius: 0;
 }
 .accommodation__content {
   width: 100%;

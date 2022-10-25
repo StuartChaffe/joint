@@ -661,6 +661,24 @@ div[data-type="core/button"] div[data-block] {
   flex: 1;
 }
 
+#content > h1,
+#content > h2,
+#content > p {
+  max-width: var(--container-s);
+  margin-left: auto;
+  margin-right: auto;
+}
+#content > h1:first-child,
+#content > h2:first-child,
+#content > p:first-child {
+  margin-top: var(--spacing-xxl);
+}
+#content > h1:last-child,
+#content > h2:last-child,
+#content > p:last-child {
+  margin-bottom: var(--spacing-xxl);
+}
+
 .content > * {
   max-width: var(--content-width);
   margin-right: auto;

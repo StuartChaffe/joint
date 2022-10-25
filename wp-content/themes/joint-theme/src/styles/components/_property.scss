@@ -59,11 +59,15 @@
 		}
 		&:last-child {
 			border-bottom: 0.5px solid black;
+			margin-bottom: 0;
 		}
 	}
 	&__amenities {
 		&-item {
 			margin-bottom: var(--spacing-s);
+			&:last-child {
+				margin-bottom: 0;
+			}
 			p {
 				margin-bottom: 0;
 			}

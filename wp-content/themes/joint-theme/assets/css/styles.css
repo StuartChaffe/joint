@@ -770,9 +770,13 @@ div[data-type="core/button"] div[data-block] {
 }
 .property__item:last-child {
   border-bottom: 0.5px solid black;
+  margin-bottom: 0;
 }
 .property__amenities-item {
   margin-bottom: var(--spacing-s);
+}
+.property__amenities-item:last-child {
+  margin-bottom: 0;
 }
 .property__amenities-item p {
   margin-bottom: 0;

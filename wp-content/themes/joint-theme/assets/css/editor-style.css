@@ -936,6 +936,18 @@ p + p .btn {
   margin-top: 0;
 }
 
+.accommodation-featured .accommodation__item {
+  flex-direction: column;
+}
+.accommodation-featured .accommodation__image,
+.accommodation-featured .accommodation__content {
+  width: 100%;
+}
+.accommodation-featured .accommodation__content {
+  margin-top: var(--spacing);
+  padding-left: 0;
+}
+
 .accordion {
   max-width: var(--content-width);
   margin-top: var(--spacing-xl);

@@ -82,3 +82,17 @@
 		}
 	}
 }
+
+.accommodation-featured {
+	.accommodation__item {
+		flex-direction: column;
+	}
+	.accommodation__image,
+	.accommodation__content {
+		width: 100%;
+	}
+	.accommodation__content {
+		margin-top: var(--spacing);
+		padding-left: 0;
+	}
+}

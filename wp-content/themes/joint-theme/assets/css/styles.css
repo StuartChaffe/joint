@@ -1177,13 +1177,13 @@ p + p .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
+  width: 24px;
   line-height: 0px;
   font-size: 0px;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
-  bottom: -30px;
+  bottom: 50%;
   border: none;
   outline: none;
   z-index: 9;
@@ -1198,16 +1198,11 @@ p + p .btn {
 }
 
 .slick-prev {
-  left: 0;
+  left: -52px;
 }
 @media (min-width: 50em) {
   .slick-prev {
-    left: var(--spacing-s);
-  }
-}
-@media (min-width: 80em) {
-  .slick-prev {
-    left: var(--spacing-s);
+    left: -72px;
   }
 }
 .slick-prev:before {
@@ -1219,16 +1214,11 @@ p + p .btn {
 }
 
 .slick-next {
-  right: 0px;
+  right: -52px;
 }
 @media (min-width: 50em) {
   .slick-next {
-    right: var(--spacing-s);
-  }
-}
-@media (min-width: 80em) {
-  .slick-next {
-    right: var(--spacing-s);
+    right: -72px;
   }
 }
 .slick-next:before {
@@ -2401,6 +2391,37 @@ body.nav-open {
 }
 .feature-properties__rooms, .feature-properties__price {
   margin-bottom: var(--spacing-s);
+}
+
+.reviews {
+  padding: var(--spacing-l) var(--spacing-s) 0 var(--spacing-s);
+}
+@media (min-width: 50em) {
+  .reviews {
+    padding: var(--spacing-l) var(--spacing-xl) 0 var(--spacing-xl);
+  }
+}
+.reviews--inner {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-l);
+}
+@media (min-width: 50em) {
+  .reviews--inner {
+    padding: var(--spacing-xl);
+  }
+}
+.reviews-slider {
+  margin-top: var(--spacing);
+}
+@media (min-width: 50em) {
+  .reviews-slider {
+    margin-top: var(--spacing-l);
+  }
+}
+@media (min-width: 50em) {
+  .reviews-slider--item {
+    padding-right: var(--spacing);
+  }
 }
 
 .u-bold {

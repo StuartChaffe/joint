@@ -154,13 +154,13 @@ $slick-opacity-not-active: 0.25 !default;
     align-items: center;
     justify-content: center;
 	// height: 12px;
-	width: 22px;
+	width: 24px;
 	line-height: 0px;
 	font-size: 0px;
 	padding: 0;
 	cursor: pointer;
 	background-color:  transparent;
-	bottom: -30px;
+	bottom: 50%;
 	border: none;
 	outline: none;
 	z-index: 9;
@@ -183,13 +183,10 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-	left: 0;
+	left: -52px;
 	
 	@include mq(medium) {
-		left: var(--spacing-s);
-	}
-	@include mq(xlarge) {
-		left: var(--spacing-s);
+		left: -72px;
 	}
 	// padding: 0 1rem 0 2rem;
 	&:before {
@@ -206,12 +203,9 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-	right: 0px;
+	right: -52px;
 	@include mq(medium) {
-		right: var(--spacing-s);
-	}
-	@include mq(xlarge) {
-		right: var(--spacing-s);
+		right: -72px;
 	}
 	// padding: 0 2rem 0 1rem;
 	&:before {

@@ -1168,11 +1168,6 @@ p + p .btn {
     flex-direction: row;
   }
 }
-@media (min-width: 70em) {
-  .feature-panel {
-    min-height: 50vw;
-  }
-}
 .feature-panel__item {
   width: 100%;
   padding: var(--spacing-xl) var(--spacing);

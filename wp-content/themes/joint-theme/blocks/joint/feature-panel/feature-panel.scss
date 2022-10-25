@@ -5,18 +5,10 @@
 	align-items: center;
 	@include mq(medium) {
 		flex-direction: row;
-		// padding: var(--spacing-l);
-	}
-	@include mq(large) {
-		min-height: 50vw;
 	}
 	&__item {
 		width: 100%;
 		padding: var(--spacing-xl) var(--spacing);
-		// @include mq(medium) {
-		// 	width: 50%;
-		// 	padding: var(--spacing);
-		// }
 		@include mq(large) {
 			width: 50%;
 			padding: var(--spacing-xl);

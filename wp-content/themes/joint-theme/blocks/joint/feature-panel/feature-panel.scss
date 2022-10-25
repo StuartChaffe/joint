@@ -3,10 +3,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	// min-height: 100vh;
 	@include mq(medium) {
 		flex-direction: row;
 		// padding: var(--spacing-l);
+	}
+	@include mq(large) {
+		min-height: 50vw;
 	}
 	&__item {
 		width: 100%;
@@ -24,9 +26,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		justify-content: center;
 		z-index: 1;
 		&--top {
 			align-items: flex-start;
+			.feature-panel__text {
+				justify-content: flex-start;
+			}
 		}
 
 		ul {
@@ -40,71 +46,12 @@
 			}
 		}
 	}
-	// &__bkg-image {
-	// 	position: relative;
-	// 	background-color:  var(--color-primary);
-	// 	overflow: hidden;
-	// 	// margin-bottom: var(--spacing);
-	// 	@include mq(medium) {
-	// 		padding-top: var(--spacing-xl);
-	// 		padding-bottom: var(--spacing-xl);
-	// 		// margin-bottom: 0;
-	// 	}
-
-	// 	img {
-			
-	// 		@include mq(medium) {
-	// 			position: absolute;
-	// 			top: 50%;
-	// 			left: 50%;
-	// 			transform: translate(-50%, -50%);
-	// 			max-width: none;
-	// 			min-width: 100%;
-	// 			min-height: calc(100% + 2px);
-	// 		}
-	// 	}
-
-	// 	.feature-panel__item {
-
-	// 		@include mq(medium) {
-	// 			width: calc(100% / 2);
-	// 		}
-	// 		@include mq(large) {
-	// 			width: calc(100% / 3);
-	// 		}
-	// 	}
-
-	// 	.feature-panel__image {
-	// 		order: 1;
-	// 		padding: var(--spacing) var(--spacing) 0 var(--spacing);
-	// 		@include mq(medium) {
-	// 			order: 2;
-	// 			padding: 0 var(--spacing);
-	// 		}
-	// 	}
-
-	// 	.feature-panel__text {
-	// 		background-color: var(--color-primary);
-	// 		padding: var(--spacing);
-	// 		color: white;
-	// 		order: 2;
-	// 		@include mq(medium) {
-	// 			order: 1;
-	// 		}
-	// 	}
-	// 	+ .feature-panel {
-	// 		@include mq(medium) {
-	// 			padding-top: var(--spacing-l) !important;
-	// 		}
-	// 	}
-	// }
 	&__image {
-		// padding: var(--spacing) var(--spacing) 0 var(--spacing);
 		display: flex;
 		justify-content: center;
 		@include mq($until: medium) {
 			padding-top: 0;
-			padding-bottom: 0;
+			padding-bottom: var(--spacing-l);
 			order: 2 !important;
 		}
 		&--left {
@@ -127,8 +74,30 @@
 		}
 		&--bkg {
 			padding: 0;
+			align-items: stretch;
+			position: relative;
+			overflow: hidden;
 			img {
 				width: 100%;
+			}
+		}
+	}
+	&--bkg__image {
+		position: relative;
+		height: 100%;
+		width: 100%;
+
+		img {
+			@include mq(medium) {
+				position: absolute;
+				z-index: 0;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				max-width: none;
+				min-width: calc(100% + 2px);
+				min-height: calc(100% + 2px);
+				display: block;
 			}
 		}
 	}

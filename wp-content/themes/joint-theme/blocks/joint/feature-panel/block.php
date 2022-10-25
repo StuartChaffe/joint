@@ -15,10 +15,12 @@ $imagetype		= get_field('image_type');
 $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button', 'core/list' );
 $bkg			= get_field('bkg_colour');
 ?>
-<section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?>">
+<section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?><?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?>">
 	<?php if ($image) { ?>
 	<div class="feature-panel__item feature-panel__image<?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?>">
+		<?php if ($imagetype == 'feature-panel__image--bkg') { ?><div class="feature-panel--bkg__image"><?php } ?>
 		<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		<?php if ($imagetype == 'feature-panel__image--bkg') { ?></div><?php } ?>
 	</div>
 	<?php } ?>
 	<div class="feature-panel__item feature-panel__text">

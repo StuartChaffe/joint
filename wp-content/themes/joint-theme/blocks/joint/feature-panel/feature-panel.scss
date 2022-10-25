@@ -69,6 +69,9 @@
 			align-items: stretch;
 			position: relative;
 			overflow: hidden;
+			@include mq(large) {
+				min-height: 40vw;
+			}
 			img {
 				width: 100%;
 			}

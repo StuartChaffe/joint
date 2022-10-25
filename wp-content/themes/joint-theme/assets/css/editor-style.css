@@ -1234,6 +1234,11 @@ p + p .btn {
   position: relative;
   overflow: hidden;
 }
+@media (min-width: 70em) {
+  .feature-panel__image--bkg {
+    min-height: 40vw;
+  }
+}
 .feature-panel__image--bkg img {
   width: 100%;
 }

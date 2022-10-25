@@ -648,7 +648,12 @@ div[data-type="core/button"] div[data-block] {
   margin-bottom: 0;
 }
 .property__benefits {
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing-s);
+}
+@media (min-width: 50em) {
+  .property__benefits {
+    margin-bottom: var(--spacing);
+  }
 }
 .property__benefits-item {
   display: flex;
@@ -853,10 +858,12 @@ p + p .btn {
 }
 .accommodation__image {
   width: 100%;
+  margin-bottom: var(--spacing-s);
 }
 @media (min-width: 50em) {
   .accommodation__image {
     width: 50%;
+    margin-bottom: 0;
   }
 }
 .accommodation__image img {
@@ -864,7 +871,7 @@ p + p .btn {
   border-radius: var(--border-radius);
 }
 .accommodation__image .property__benefits {
-  margin-top: var(--spacing);
+  margin-top: var(--spacing-s);
 }
 .accommodation__image .property__benefits img {
   border-radius: 0;

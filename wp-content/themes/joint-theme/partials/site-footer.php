@@ -2,7 +2,7 @@
 	<div class="site-footer__inner">
 		<div class="site-footer__left">
 			<div class="site-footer__form">
-				<h3>Keep me updated</h3>
+				<p>Keep me updated</p>
 				FORM
 			</div>
 
@@ -22,14 +22,14 @@
 		<div class="site-footer__right">
 			<div class="site-footer__links">
 				<ul>
-					<li><a href="">Brighton</a></li>
-					<li><a href="">Bath</a></li>
-					<li><a href="">Bristol</a></li>
-					<li><a href="">Newcastle</a></li>
+					<li><a href="/cities/brighton/">Brighton</a></li>
+					<li><a href="/cities/bath/">Bath</a></li>
+					<li><a href="/cities/bristol/">Bristol</a></li>
+					<li><a href="/cities/newcastle/">Newcastle</a></li>
 				</ul>
 				<ul>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
 				</ul>
 				
 				<p>&copy; <?php echo date('Y'); ?> All rights reserved</p>
@@ -51,9 +51,9 @@
 				<?php } ?>
 				</ul>
 				<ul>
-					<li><a href="">Terms & Conditions</a></li>
-					<li><a href="">Privacy Policy</a></li>
-					<li><a href="">Cookie Policy</a></li>
+					<li><a href="/terms-conditions">Terms & Conditions</a></li>
+					<li><a href="/privacy-policy">Privacy Policy</a></li>
+					<li><a href="/cookie-policy">Cookie Policy</a></li>
 				</ul>
 				
 				<?php if (get_field('footer_award_logo', 'options')) { 

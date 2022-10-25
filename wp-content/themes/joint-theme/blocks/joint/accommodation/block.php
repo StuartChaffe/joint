@@ -47,7 +47,7 @@ $accommodation = get_field( 'select_location');
 				<img src="<?php echo get_template_directory_uri(); ?>/src/images/property-default-thumb.png" alt="Property default image" />
 			<?php } ?>
 			<?php if( have_rows('benefits', get_the_id()) ) { ?>
-				<div class="property__benefits">
+				<div class="property__benefits hidemobile">
 					<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
 						$title = get_sub_field('benefits_title');
 						$image = get_sub_field('benefits_icon');
@@ -105,6 +105,21 @@ $accommodation = get_field( 'select_location');
 						<?php } ?>
 					</div>	
 				</div>
+
+				<?php if( have_rows('benefits', get_the_id()) ) { ?>
+					<div class="property__benefits hidedesktop">
+						<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
+							$title = get_sub_field('benefits_title');
+							$image = get_sub_field('benefits_icon');
+						?>
+						<div class="property__benefits-item">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<?php if($title) { ?><p class="text--green"><strong><?php echo $title; ?></strong></p><?php } ?>
+						</div>
+						<?php endwhile; ?>
+					</div>
+				<?php } ?>
+
 				<a href="<?php esc_url(the_permalink() ); ?>" class="btn">Find out more</a>
 			</div>
 		</div>

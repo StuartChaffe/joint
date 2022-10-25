@@ -23,15 +23,17 @@
 	}
 	&__image {
 		width: 100%;
+		margin-bottom: var(--spacing-s);
 		@include mq(medium) {
 			width: 50%;
+			margin-bottom: 0;
 		}
 		img {
 			width: 100%;
 			border-radius: var(--border-radius);
 		}
 		.property__benefits {
-			margin-top: var(--spacing);
+			margin-top: var(--spacing-s);
 			img {
 				border-radius: 0;
 			}

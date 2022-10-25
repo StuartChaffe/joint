@@ -1,9 +1,19 @@
+<?php
+$logo = get_field('company_logo', 'options');
+$tel = get_field('telephone', 'options');
+?>
 <header class="site-header">
 	<div class="site-header__inner">
-		<div class="site-header__contact">Call <a href="tel:01273 257 141">01273 257 141</a> to book now!</div>
-
-
-		<div class="site-header__logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Space logo" /></a></div>
+		<div class="site-header__contact">Call <a href="tel:<?php echo $tel; ?>"><?php echo $tel; ?></a> to book now!</div>
+		<div class="site-header__logo">
+			<a href="<?php echo home_url(); ?>">
+			<?php if($logo) { ?>
+				<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+			<?php } else { ?>
+			<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Space logo" />
+			<?php } ?>
+			</a>
+		</div>
 
 		<div class="site-header__content">
 			<nav class="site-header__nav">

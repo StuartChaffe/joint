@@ -47,6 +47,46 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_634fdcb606b1b",
+                    "label": "Post code",
+                    "name": "postcode",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_635265f95cad9",
+                    "label": "Available from",
+                    "name": "available_from",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_634fdb2835924",
                     "label": "Total rooms",
                     "name": "total_rooms",
@@ -175,6 +215,28 @@
                     "append": ""
                 },
                 {
+                    "key": "field_6356c260c69f2",
+                    "label": "Living rooms",
+                    "name": "living_rooms",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_6356bce161463",
                     "label": "WC",
                     "name": "wc",
@@ -263,46 +325,6 @@
                     "append": ""
                 },
                 {
-                    "key": "field_634fdcb606b1b",
-                    "label": "Post code",
-                    "name": "postcode",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_635265f95cad9",
-                    "label": "Available from",
-                    "name": "available_from",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_635269a56acd0",
                     "label": "Description",
                     "name": "description",
@@ -328,7 +350,7 @@
                     "name": "short_description",
                     "aria-label": "",
                     "type": "wysiwyg",
-                    "instructions": "",
+                    "instructions": "(Shown on list of properties)",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -339,30 +361,8 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 1,
+                    "media_upload": 0,
                     "delay": 0
-                },
-                {
-                    "key": "field_6356c260c69f2",
-                    "label": "Living rooms",
-                    "name": "living_rooms",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
                 }
             ]
         },
@@ -478,11 +478,11 @@
             ]
         },
         {
-            "key": "field_635269f5483ca",
-            "label": "Features",
-            "name": "features",
+            "key": "field_6357aa194dd7f",
+            "label": "Benefits",
+            "name": "benefits",
             "aria-label": "",
-            "type": "group",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -491,27 +491,60 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_635269fe483cb",
-                    "label": "Features (short)",
-                    "name": "features_short",
+                    "key": "field_6357aa4b4dd81",
+                    "label": "Icon",
+                    "name": "benefits_icon",
                     "aria-label": "",
-                    "type": "wysiwyg",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6357aa194dd7f"
+                },
+                {
+                    "key": "field_6357aaa24dd82",
+                    "label": "Title",
+                    "name": "benefits_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6357aa194dd7f"
                 }
             ]
         }
@@ -536,5 +569,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666630259
+    "modified": 1666690778
 }

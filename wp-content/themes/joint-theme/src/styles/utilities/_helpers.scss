@@ -94,6 +94,10 @@ img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 		.wp-block-button__link {
 			background-color: white;
 			color: var(--color-text-dark);
+			&:hover {
+				background-color: var(--color-text-dark);
+				color: white;
+			}
 		}
 	}
 }

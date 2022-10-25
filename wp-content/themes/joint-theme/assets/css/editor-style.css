@@ -647,6 +647,25 @@ div[data-type="core/button"] div[data-block] {
 .property__amenities-item p {
   margin-bottom: 0;
 }
+.property__benefits {
+  margin-bottom: var(--spacing);
+}
+.property__benefits-item {
+  display: flex;
+  margin-bottom: var(--spacing-s);
+  align-items: center;
+}
+.property__benefits-item:last-child {
+  margin-bottom: 0;
+}
+.property__benefits-item p {
+  margin-bottom: 0;
+}
+.property__benefits-item img,
+.property__benefits-item .icon {
+  width: 25px;
+  margin-right: 10px;
+}
 .property__features-list {
   display: flex;
   flex-wrap: wrap;
@@ -656,10 +675,11 @@ div[data-type="core/button"] div[data-block] {
   display: flex;
   width: 50%;
   margin-bottom: var(--spacing-s);
+  align-items: center;
 }
 .property__features-list-item img,
 .property__features-list-item .icon {
-  width: 25px;
+  width: 30px;
   margin-right: 10px;
 }
 
@@ -1425,6 +1445,10 @@ img.aligncenter {
 .bkg--green .wp-block-button__link {
   background-color: white;
   color: var(--color-text-dark);
+}
+.bkg--green .wp-block-button__link:hover {
+  background-color: var(--color-text-dark);
+  color: white;
 }
 
 .text--orange {

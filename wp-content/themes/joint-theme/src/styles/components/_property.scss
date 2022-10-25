@@ -73,6 +73,26 @@
 			}
 		}
 	}
+	&__benefits {
+		margin-bottom: var(--spacing);
+		&-item {
+			display: flex;
+			margin-bottom: var(--spacing-s);
+			align-items: center;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+
+			img,
+			.icon {
+				width: 25px;
+				margin-right: 10px;
+			}
+		}
+	}
 	&__features-list {
 		display: flex;
 		flex-wrap: wrap;
@@ -82,10 +102,11 @@
 			display: flex;
 			width: 50%;
 			margin-bottom: var(--spacing-s);
+			align-items: center;
 
 			img,
 			.icon {
-				width: 25px;
+				width: 30px;
 				margin-right: 10px;
 			}
 		}

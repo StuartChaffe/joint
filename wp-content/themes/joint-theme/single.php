@@ -125,7 +125,20 @@
 
 			</div>
 			<div class="property__contact">
-				BENEFIT <br />
+				<?php if( have_rows('benefits', get_the_id()) ) { ?>
+					<div class="property__benefits">
+						<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
+							$title = get_sub_field('benefits_title');
+							$image = get_sub_field('benefits_icon');
+						?>
+						<div class="property__benefits-item">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<?php if($title) { ?><p class="text--green"><strong><?php echo $title; ?></strong></p><?php } ?>
+						</div>
+						<?php endwhile; ?>
+					</div>
+				<?php } ?>
+
 				MAP<br />
 				FORM<br />
 

@@ -139,7 +139,14 @@
 					</div>
 				<?php } ?>
 
-				FORM<br />
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "7287208",
+    formId: "a0cc36ed-b82f-4a23-9c56-e0b1682792a2"
+  });
+</script>
 
 				<p><strong>Similar properties</strong></p>
 				<?php

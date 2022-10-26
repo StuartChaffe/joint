@@ -1033,9 +1033,15 @@ p + p .btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   overflow: hidden;
+  min-height: 100vh;
+}
+@media (min-width: 50em) {
+  .banner {
+    justify-content: center;
+  }
 }
 .banner__content {
   z-index: 2;
@@ -1044,16 +1050,20 @@ p + p .btn {
   text-align: center;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
-  padding-top: 30vh;
 }
 @media (min-width: 50em) {
   .banner__content {
     min-height: 100vh;
+    padding-top: 30vh;
   }
 }
 .banner__content h1:last-of-type, .banner__content h2:last-of-type, .banner__content p:last-of-type {
   margin-bottom: var(--spacing);
+}
+@media (min-width: 50em) {
+  .banner__content h1:last-of-type, .banner__content h2:last-of-type, .banner__content p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 .banner__image {
   margin-top: auto;

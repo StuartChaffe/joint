@@ -22,6 +22,7 @@
 	$images = get_field('images', get_the_id());
 	$locations = get_the_terms( get_the_ID(), 'location' );
 	$features = get_the_terms( get_the_ID(), 'features' );
+	$amenities = get_the_terms( get_the_ID(), 'amenities' );
 ?>
 
 	<article id="content" class="property">
@@ -119,9 +120,21 @@
 					</div>
 				</div>
 				<?php } ?>
+				<?php if($amenities) { ?>
 				<div class="property__item">
-					IN THIS PROPERTY
+					<p><strong>In this property</strong></p>
+					<div class="property__features-list">
+					<?php foreach ( $amenities as $amenity ) { 
+						$taximage = get_field('taxonomy_image', $amenity );
+					?>
+						<div class="property__features-list-item">
+							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+							<p><?php echo $amenity->name ; ?></p>
+						</div>
+					<?php } ?>
+					</div>
 				</div>
+				<?php } ?>
 
 			</div>
 			<div class="property__contact">

@@ -852,6 +852,7 @@ div[data-type="core/button"] div[data-block] {
 .gallery {
   margin: 0 var(--spacing-s) var(--spacing-s) var(--spacing-s);
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
 @media (min-width: 50em) {
   .gallery {

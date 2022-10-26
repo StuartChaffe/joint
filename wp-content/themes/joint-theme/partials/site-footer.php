@@ -33,6 +33,8 @@
 					<li><a href="/cities/bath/">Bath</a></li>
 					<li><a href="/cities/bristol/">Bristol</a></li>
 					<li><a href="/cities/newcastle/">Newcastle</a></li>
+					<li><a href="/cities/nottingham/">Newcastle</a></li>
+					<li><a href="/cities/oxford/">Oxford</a></li>
 				</ul>
 				<ul>
 					<li><a href="/about">About</a></li>

@@ -1052,6 +1052,9 @@ p + p .btn {
     min-height: 100vh;
   }
 }
+.banner__content h1:last-of-type, .banner__content h2:last-of-type, .banner__content p:last-of-type {
+  margin-bottom: var(--spacing);
+}
 .banner__image {
   margin-top: auto;
   margin-bottom: var(--spacing-s);

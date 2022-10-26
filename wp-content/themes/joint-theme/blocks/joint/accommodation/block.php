@@ -38,6 +38,7 @@ $accommodation = get_field( 'select_location');
 		$shortdesc = $details['short_description'];
 
 		$features = get_field('features', get_the_id());
+		$benefits = get_the_terms( get_the_ID(), 'benefits' );
 	?>
 		<div class="accommodation__item">
 			<div class="accommodation__image">
@@ -46,20 +47,19 @@ $accommodation = get_field( 'select_location');
 			<?php } else { ?>
 				<img src="<?php echo get_template_directory_uri(); ?>/src/images/property-default-thumb.png" alt="Property default image" />
 			<?php } ?>
-			<?php if( have_rows('benefits', get_the_id()) ) { ?>
-				<div class="property__benefits hidemobile">
-					<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
-						$title = get_sub_field('benefits_title');
-						$image = get_sub_field('benefits_icon');
-					?>
-					<div class="property__benefits-item">
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php if($title) { ?><p class="text--green"><strong><?php echo $title; ?></strong></p><?php } ?>
-					</div>
-					<?php endwhile; ?>
-				</div>
-			<?php } ?>
 
+			<?php if($benefits) { ?>
+				<div class="property__benefits hidemobile">
+					<?php foreach ( $benefits as $benefit ) { 
+						$taximage = get_field('taxonomy_image', $benefit );
+					?>
+						<div class="property__benefits-item">
+							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+							<p class="text--green"><strong><?php echo $benefit->name ; ?></strong></p>
+						</div>
+					<?php } ?>
+				</div>
+				<?php } ?>
 			</div>
 
 			<div class="accommodation__content">

@@ -1122,10 +1122,11 @@ p + p .btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 1em;
   text-align: center;
 }
 .feature-pages__list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1196,7 +1197,7 @@ p + p .btn {
 }
 .feature-panel__item {
   width: 100%;
-  padding: var(--spacing-xl) var(--spacing);
+  padding: var(--spacing-l) var(--spacing);
 }
 @media (min-width: 70em) {
   .feature-panel__item {
@@ -1305,10 +1306,11 @@ p + p .btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 1em;
   text-align: center;
 }
 .feature-properties__list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1377,7 +1379,7 @@ p + p .btn {
 }
 
 .reviews {
-  padding: var(--spacing-l) var(--spacing-s) 0 var(--spacing-s);
+  padding: var(--spacing-l) var(--spacing-s) !important;
 }
 @media (min-width: 50em) {
   .reviews {
@@ -1386,7 +1388,7 @@ p + p .btn {
 }
 .reviews--inner {
   border-radius: var(--border-radius);
-  padding: var(--spacing-l);
+  padding: var(--spacing);
 }
 @media (min-width: 50em) {
   .reviews--inner {

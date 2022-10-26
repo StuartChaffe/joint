@@ -183,7 +183,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-	left: -52px;
+	left: -32px;
 	
 	@include mq(medium) {
 		left: -72px;
@@ -203,7 +203,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-	right: -52px;
+	right: -32px;
 	@include mq(medium) {
 		right: -72px;
 	}

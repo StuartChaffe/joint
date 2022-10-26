@@ -1198,7 +1198,7 @@ p + p .btn {
 }
 
 .slick-prev {
-  left: -52px;
+  left: -32px;
 }
 @media (min-width: 50em) {
   .slick-prev {
@@ -1214,7 +1214,7 @@ p + p .btn {
 }
 
 .slick-next {
-  right: -52px;
+  right: -32px;
 }
 @media (min-width: 50em) {
   .slick-next {
@@ -2165,10 +2165,11 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 1em;
   text-align: center;
 }
 .feature-pages__list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -2239,7 +2240,7 @@ body.nav-open {
 }
 .feature-panel__item {
   width: 100%;
-  padding: var(--spacing-xl) var(--spacing);
+  padding: var(--spacing-l) var(--spacing);
 }
 @media (min-width: 70em) {
   .feature-panel__item {
@@ -2348,10 +2349,11 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 1em;
   text-align: center;
 }
 .feature-properties__list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -2420,7 +2422,7 @@ body.nav-open {
 }
 
 .reviews {
-  padding: var(--spacing-l) var(--spacing-s) 0 var(--spacing-s);
+  padding: var(--spacing-l) var(--spacing-s) !important;
 }
 @media (min-width: 50em) {
   .reviews {
@@ -2429,7 +2431,7 @@ body.nav-open {
 }
 .reviews--inner {
   border-radius: var(--border-radius);
-  padding: var(--spacing-l);
+  padding: var(--spacing);
 }
 @media (min-width: 50em) {
   .reviews--inner {

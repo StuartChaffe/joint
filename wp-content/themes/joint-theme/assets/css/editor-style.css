@@ -1130,10 +1130,8 @@ p + p .btn {
     transform: translate(-100%, 0);
   }
 }
-@media (max-width: 49.99em) {
-  .feature-properties + .feature-pages {
-    padding-top: 0;
-  }
+.feature-properties + .feature-pages {
+  padding-top: 0;
 }
 
 .feature-pages {
@@ -1314,10 +1312,8 @@ p + p .btn {
   }
 }
 
-@media (max-width: 49.99em) {
-  .feature-pages + .feature-properties {
-    padding-top: 0;
-  }
+.feature-pages + .feature-properties {
+  padding-top: 0;
 }
 
 .feature-properties {

@@ -1,7 +1,5 @@
 .feature-pages + .feature-properties {
-	@include mq($until: medium) {
-		padding-top: 0;
-	}
+	padding-top: 0;
 }
 .feature-properties {
 	display: flex;

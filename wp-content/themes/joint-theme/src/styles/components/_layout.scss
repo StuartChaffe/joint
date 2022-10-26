@@ -39,4 +39,8 @@
 			margin-bottom: var(--spacing-xxl);
 		}
 	}
+	> .hbspt-form {
+		max-width: var(--container-s);
+		margin: 0 auto;
+	}
 }

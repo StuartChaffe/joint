@@ -544,6 +544,10 @@ div[data-type="core/button"] div[data-block] {
 #content > p:last-child {
   margin-bottom: var(--spacing-xxl);
 }
+#content > .hbspt-form {
+  max-width: var(--container-s);
+  margin: 0 auto;
+}
 
 .content > * {
   max-width: var(--content-width);

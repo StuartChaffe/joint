@@ -91,6 +91,7 @@ function joint_allowed_block_types( $allowed_blocks ) {
 		'core/button',
 		'core/list',
 		'core/image',
+		'core/html',
 	);
  
 }

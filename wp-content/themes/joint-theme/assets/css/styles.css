@@ -2410,7 +2410,7 @@ body.nav-open {
 }
 @media (min-width: 50em) {
   .reviews {
-    padding: var(--spacing-l) var(--spacing-xl) 0 var(--spacing-xl);
+    padding: var(--spacing-l) var(--spacing-xl) !important;
   }
 }
 .reviews--inner {

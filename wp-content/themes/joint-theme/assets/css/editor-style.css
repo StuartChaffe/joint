@@ -1036,11 +1036,12 @@ p + p .btn {
   justify-content: flex-end;
   text-align: center;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 @media (min-width: 50em) {
   .banner {
     justify-content: center;
+    min-height: 100vh;
   }
 }
 .banner__content {

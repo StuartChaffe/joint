@@ -1058,11 +1058,11 @@ p + p .btn {
     padding-top: 30vh;
   }
 }
-.banner__content h1:last-of-type, .banner__content h2:last-of-type, .banner__content p:last-of-type {
+.banner__content p:last-of-type {
   margin-bottom: var(--spacing);
 }
 @media (min-width: 50em) {
-  .banner__content h1:last-of-type, .banner__content h2:last-of-type, .banner__content p:last-of-type {
+  .banner__content p:last-of-type {
     margin-bottom: 0;
   }
 }

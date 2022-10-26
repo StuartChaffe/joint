@@ -27,7 +27,7 @@
 			padding-top: 30vh;
 		}
 
-		h1, h2, p {
+		p {
 			&:last-of-type {
 				margin-bottom: var(--spacing);
 				@include mq(medium) {

@@ -1733,7 +1733,13 @@ p + p .btn {
   align-items: center;
 }
 .site-footer__logos-item {
+  margin-bottom: var(--spacing-xs);
   margin-right: var(--spacing-s);
+}
+@media (min-width: 50em) {
+  .site-footer__logos-item {
+    width: 50%;
+  }
 }
 .site-footer__logos-item img {
   max-height: 40px;

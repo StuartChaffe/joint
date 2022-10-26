@@ -1,3 +1,8 @@
+.feature-properties + .feature-pages {
+	@include mq($until: medium) {
+		padding-top: 0;
+	}
+}
 .feature-pages {
 	display: flex;
 	flex-direction: column;

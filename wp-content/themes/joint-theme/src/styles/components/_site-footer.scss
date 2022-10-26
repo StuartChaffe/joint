@@ -30,11 +30,8 @@
 		align-items: center;
 		&-item{
 			// max-height: 30px;
-			margin-bottom: var(--spacing-xs);
+			margin-bottom: var(--spacing-s);
 			margin-right: var(--spacing-s);
-			@include mq(medium) {
-				width: 50%;
-			}
 			img {
 				max-height: 40px;
 			}

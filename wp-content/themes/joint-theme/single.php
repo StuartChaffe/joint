@@ -21,6 +21,7 @@
 
 	$images = get_field('images', get_the_id());
 	$locations = get_the_terms( get_the_ID(), 'location' );
+	$benefits = get_the_terms( get_the_ID(), 'benefits' );
 	$features = get_the_terms( get_the_ID(), 'features' );
 	$amenities = get_the_terms( get_the_ID(), 'amenities' );
 ?>
@@ -138,18 +139,18 @@
 
 			</div>
 			<div class="property__contact">
-				<?php if( have_rows('benefits', get_the_id()) ) { ?>
-					<div class="property__benefits hidemobile">
-						<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
-							$title = get_sub_field('benefits_title');
-							$image = get_sub_field('benefits_icon');
-						?>
+
+				<?php if($benefits) { ?>
+				<div class="property__benefits hidemobile">
+					<?php foreach ( $benefits as $benefit ) { 
+						$taximage = get_field('taxonomy_image', $benefit );
+					?>
 						<div class="property__benefits-item">
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-							<?php if($title) { ?><p class="text--green"><strong><?php echo $title; ?></strong></p><?php } ?>
+							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+							<p class="text--green"><strong><?php echo $benefit->name ; ?></strong></p>
 						</div>
-						<?php endwhile; ?>
-					</div>
+					<?php } ?>
+				</div>
 				<?php } ?>
 
 				<p><strong>Enquire about</strong><br />
@@ -195,6 +196,7 @@
 						$shortdesc = $details['short_description'];
 
 						$features = get_field('features', get_the_id());
+						$benefits = get_the_terms( get_the_ID(), 'benefits' );
 					?>
 						<div class="accommodation__item">
 							<div class="accommodation__image">
@@ -261,21 +263,20 @@
 										<?php endwhile; ?>
 									</div>
 								<?php } ?>
-								
 
-								<?php if( have_rows('benefits', get_the_id()) ) { ?>
-									<div class="property__benefits hidemobile">
-										<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
-											$title = get_sub_field('benefits_title');
-											$image = get_sub_field('benefits_icon');
-										?>
+								<?php if($benefits) { ?>
+								<div class="property__benefits hidemobile">
+									<?php foreach ( $benefits as $benefit ) { 
+										$taximage = get_field('taxonomy_image', $benefit );
+									?>
 										<div class="property__benefits-item">
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-											<?php if($title) { ?><p class="text--green"><strong><?php echo $title; ?></strong></p><?php } ?>
+											<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+											<p class="text--green"><strong><?php echo $benefit->name ; ?></strong></p>
 										</div>
-										<?php endwhile; ?>
-									</div>
+									<?php } ?>
+								</div>
 								<?php } ?>
+								
 								<a href="<?php esc_url(the_permalink() ); ?>" class="btn">Find out more</a>
 							</div>
 						</div>

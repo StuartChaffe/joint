@@ -42,6 +42,13 @@
                 "operator": "==",
                 "value": "amenities"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "benefits"
+            }
         ]
     ],
     "menu_order": 0,
@@ -53,5 +60,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666779293
+    "modified": 1666780659
 }

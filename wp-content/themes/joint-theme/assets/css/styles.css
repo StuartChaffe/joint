@@ -2079,7 +2079,7 @@ body.nav-open {
   justify-content: flex-end;
   text-align: center;
   overflow: hidden;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 @media (min-width: 50em) {
   .banner {

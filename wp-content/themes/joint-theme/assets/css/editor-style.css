@@ -632,6 +632,11 @@ div[data-type="core/button"] div[data-block] {
     padding-left: var(--spacing);
   }
 }
+.property__contact .hbspt-form {
+  padding-bottom: var(--spacing);
+  margin-bottom: var(--spacing-l);
+  border-bottom: 0.5px solid black;
+}
 .property__rooms {
   display: flex;
 }
@@ -936,6 +941,9 @@ p + p .btn {
   margin-top: 0;
 }
 
+.accommodation-featured {
+  margin-top: var(--spacing);
+}
 .accommodation-featured .accommodation__item {
   flex-direction: column;
 }

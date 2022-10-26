@@ -126,7 +126,7 @@
 			</div>
 			<div class="property__contact">
 				<?php if( have_rows('benefits', get_the_id()) ) { ?>
-					<div class="property__benefits">
+					<div class="property__benefits hidemobile">
 						<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
 							$title = get_sub_field('benefits_title');
 							$image = get_sub_field('benefits_icon');
@@ -138,6 +138,9 @@
 						<?php endwhile; ?>
 					</div>
 				<?php } ?>
+
+				<p><strong>Enquire about</strong><br />
+				<?php the_title(); ?>, <?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?></p>
 
 				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 				<script>
@@ -169,7 +172,7 @@
 					<div class="accommodation-featured">
 					<?php while($properties->have_posts()) : $properties->the_post(); ?>
 					<?php
-						$details = get_field('property_details', get_the_id());
+						$details = get_field('property_details');
 						$postcode = $details['postcode'];
 						$rooms = $details['total_rooms'];
 						$available = $details['available_rooms'];

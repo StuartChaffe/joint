@@ -32,6 +32,12 @@
 		@include mq(medium) {
 			padding-left: var(--spacing);
 		}
+
+		.hbspt-form {
+			padding-bottom: var(--spacing);
+			margin-bottom: var(--spacing-l);
+			border-bottom: 0.5px solid black;
+		}
 	}
 
 	&__rooms {

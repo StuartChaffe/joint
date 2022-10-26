@@ -3,6 +3,7 @@
 		<div class="site-footer__left">
 			<div class="site-footer__form">
 				<p>Keep me updated</p>
+				<br />
 				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 				<script>
 				hbspt.forms.create({

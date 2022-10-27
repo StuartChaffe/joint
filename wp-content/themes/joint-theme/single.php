@@ -166,15 +166,19 @@
 				</script>
 
 				<?php
+					$custom_terms = wp_get_post_terms( get_the_ID(), 'location');
 					$properties = new WP_Query( array(
-						// 'post_type' => 'accommodation',
+						
+						'post_type' => 'accommodation',
 						'posts_per_page' => 1,
 						'orderby' => 'rand',
 						'post__not_in' => array( $post->ID ),
 						'tax_query' => array(
 							array(
+								'field' => 'slug',
 								'taxonomy' => 'location',
-								'terms' => $accommodation,
+								// 'terms' => $accommodation,
+								'terms' => $custom_terms[0]->slug, 
 							),
 						),
 

@@ -165,7 +165,6 @@
 				});
 				</script>
 
-				<p><strong>Similar properties</strong></p>
 				<?php
 					$properties = new WP_Query( array(
 						// 'post_type' => 'accommodation',
@@ -183,6 +182,7 @@
 				?>
 
 				<?php if ($properties->have_posts()) { ?>
+					<p><strong>Similar properties</strong></p>
 					<div class="accommodation-featured">
 					<?php while($properties->have_posts()) : $properties->the_post(); ?>
 					<?php

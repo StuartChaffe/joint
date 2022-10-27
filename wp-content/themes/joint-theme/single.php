@@ -171,7 +171,7 @@
 						'post_type' => 'accommodation',
 						'posts_per_page' => 1,
 						'orderby' => 'rand',
-						'post__not_in' => array( $post->ID ),
+						// 'post__not_in' => array( $post->ID ),
 						'tax_query' => array(
 							array(
 								'taxonomy' => 'location',

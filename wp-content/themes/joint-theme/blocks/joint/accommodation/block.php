@@ -106,18 +106,17 @@ $accommodation = get_field( 'select_location');
 					</div>	
 				</div>
 
-				<?php if( have_rows('benefits', get_the_id()) ) { ?>
-					<div class="property__benefits hidedesktop">
-						<?php while( have_rows('benefits', get_the_id()) ): the_row(); 
-							$title = get_sub_field('benefits_title');
-							$image = get_sub_field('benefits_icon');
-						?>
+				<?php if($benefits) { ?>
+				<div class="property__benefits hidedesktop">
+					<?php foreach ( $benefits as $benefit ) { 
+						$taximage = get_field('taxonomy_image', $benefit );
+					?>
 						<div class="property__benefits-item">
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-							<?php if($title) { ?><p class="text--green"><strong><?php echo $title; ?></strong></p><?php } ?>
+							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+							<p class="text--green"><strong><?php echo $benefit->name ; ?></strong></p>
 						</div>
-						<?php endwhile; ?>
-					</div>
+					<?php } ?>
+				</div>
 				<?php } ?>
 
 				<a href="<?php esc_url(the_permalink() ); ?>" class="btn">Find out more</a>

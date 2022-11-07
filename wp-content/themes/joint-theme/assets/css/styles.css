@@ -639,7 +639,7 @@ div[data-type="core/button"] div[data-block] {
   width: 100%;
 }
 
-.global-container, .gallery {
+.global-container {
   max-width: var(--container-global);
   margin: 0 auto;
   display: flex;
@@ -647,7 +647,7 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .feature-properties__list, .feature-pages__list, .banner__content, .accommodation, .property__details, .property__title {
+.container, .feature-properties__list, .feature-pages__list, .banner__content, .accommodation, .gallery, .property__details, .property__title {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -850,13 +850,13 @@ div[data-type="core/button"] div[data-block] {
 }
 
 .gallery {
-  margin: 0 var(--spacing-s) var(--spacing-s) var(--spacing-s);
+  margin: 0 auto var(--spacing-s) auto;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
 @media (min-width: 50em) {
   .gallery {
-    margin: 0 var(--spacing-s) var(--spacing-xl) var(--spacing-s);
+    margin: 0 auto var(--spacing-xl) auto;
   }
 }
 .gallery--item {

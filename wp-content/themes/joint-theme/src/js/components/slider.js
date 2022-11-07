@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 		slidesToScroll: 1,
 		asNavFor: '.gallery',
 		dots: false,
-		// centerMode: true,
+		centerMode: true,
 		focusOnSelect: true
 	  });
 

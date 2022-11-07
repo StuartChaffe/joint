@@ -871,14 +871,17 @@ div[data-type="core/button"] div[data-block] {
   opacity: 1;
 }
 .gallery-nav .slick-current .gallery-nav--item img {
-  border: 16px solid white;
+  border: 8px solid white;
+}
+.gallery-nav .slick-track {
+  display: flex;
+  align-items: center;
 }
 .gallery-nav--item {
   opacity: 0.7;
 }
 .gallery-nav--item img {
-  border: 16px solid transparent;
-  border-radius: var(--border-radius);
+  border: 26px solid transparent;
 }
 .gallery-nav--item:hover {
   cursor: pointer;

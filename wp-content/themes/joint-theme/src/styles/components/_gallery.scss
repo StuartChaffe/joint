@@ -20,17 +20,21 @@
 			.gallery-nav--item {
 				opacity: 1;
 				img {
-					border: 16px solid white;
+					border: 8px solid white;
 				}
 			}
+		}
+		.slick-track {
+			display: flex;
+			align-items: center;
 		}
 		&--item {
 			// border-radius: var(--border-radius);
 			// padding: 0 0.5rem;
 			opacity: 0.7;
 			img {
-				border: 16px solid transparent;
-				border-radius: var(--border-radius);
+				border: 26px solid transparent;
+				// border-radius: var(--border-radius);
 			}
 
 			&:hover {

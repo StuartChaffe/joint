@@ -1,15 +1,42 @@
 .gallery {
 	@extend .container;
 	margin: 0 auto var(--spacing-s) auto;
-	border-radius: var(--border-radius);
+	// border-radius: var(--border-radius);
 	overflow: hidden;
 	@include mq(medium) {
-		margin: 0 auto var(--spacing-xl) auto;
+		margin: 0 auto var(--spacing-s) auto;
 	}
 	&--item {
 		width: 100%;
+	
 		img {
 			width: 100%;
+			border-radius: var(--border-radius);
+		}
+	}
+
+	&-nav {
+		.slick-current {
+			.gallery-nav--item {
+				opacity: 1;
+				img {
+					border: 16px solid white;
+				}
+			}
+		}
+		&--item {
+			border-radius: var(--border-radius);
+			// padding: 0 0.5rem;
+			opacity: 0.7;
+			img {
+				border: 16px solid transparent;
+				border-radius: var(--border-radius);
+			}
+
+			&:hover {
+				cursor: pointer;
+				opacity: 1;
+			}
 		}
 	}
 }

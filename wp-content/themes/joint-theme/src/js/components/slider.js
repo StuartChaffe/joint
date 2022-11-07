@@ -12,13 +12,24 @@ jQuery(document).ready(function($) {
 		// dots: true,
 		// adaptiveHeight: true,
 
-		dots: true,
+		dots: false,
 		arrows: false,
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
-		adaptiveHeight: true
-	});  
+		adaptiveHeight: true,
+		asNavFor: '.gallery-nav',
+	}); 
+	
+	$('.gallery-nav').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.gallery',
+		dots: false,
+		// centerMode: true,
+		focusOnSelect: true
+	  });
+
 	$(".reviews-slider").slick({
 		// settings: "unslick",
 		speed: 200,

@@ -12,8 +12,10 @@
 		@extend .container;
 		display: flex;
 		flex-direction: column;
+		margin-top: var(--spacing-s);
 		@include mq(medium) {
 			flex-direction: row;
+			margin-top: var(--spacing-xl);
 		}
 	}
 	&__content,

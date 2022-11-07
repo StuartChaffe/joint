@@ -612,10 +612,12 @@ div[data-type="core/button"] div[data-block] {
 .property__details {
   display: flex;
   flex-direction: column;
+  margin-top: var(--spacing-s);
 }
 @media (min-width: 50em) {
   .property__details {
     flex-direction: row;
+    margin-top: var(--spacing-xl);
   }
 }
 .property__content, .property__contact {

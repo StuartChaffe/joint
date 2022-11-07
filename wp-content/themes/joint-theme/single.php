@@ -39,6 +39,16 @@
 				</div>
 			<?php endforeach; ?>
 		</div>
+		<div class="container">
+			<div class="gallery-nav">
+				<?php foreach( $images as $image ): ?>
+					<div class="gallery-nav--item">
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+
 		<?php } ?>
 
 		<div class="property__details">

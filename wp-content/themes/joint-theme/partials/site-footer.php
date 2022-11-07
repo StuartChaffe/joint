@@ -40,6 +40,7 @@
 				<ul>
 					<li><a href="/about">About</a></li>
 					<li><a href="/contact">Contact</a></li>
+					<li><a href="mailto:hello@jointliving.co.uk">hello@jointliving.co.uk</a></li>
 				</ul>
 				
 				<p>&copy; <?php echo date('Y'); ?> All rights reserved</p>

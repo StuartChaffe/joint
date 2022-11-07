@@ -18,6 +18,7 @@
 	$separatewc = $details['separate_wc'];
 	$garden = $details['garden'];
 	$kitchen = $details['kitchen'];
+	$tour = $details['tour_link'];
 
 	$images = get_field('images', get_the_id());
 	$locations = get_the_terms( get_the_ID(), 'location' );
@@ -57,6 +58,7 @@
 					<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 
 						<?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
 					</h4>
+					<?php if($tour) { ?><a href="<?php echo $tour; ?>" target="_blank"><?php echo get_icon('tour'); ?> Take 3D Tour</a><?php } ?>
 				</div>
 
 				<div class="property__item">

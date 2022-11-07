@@ -204,11 +204,13 @@
 					?>
 						<div class="accommodation__item">
 							<div class="accommodation__image">
+							<a href="<?php esc_url(the_permalink() );?>">
 							<?php if( get_the_post_thumbnail() ) { ?>	
 								<?php echo get_the_post_thumbnail(); ?>
 							<?php } else { ?>
 								<img src="<?php echo get_template_directory_uri(); ?>/src/images/property-default-thumb.png" alt="Property default image" />
 							<?php } ?>
+							</a>
 							</div>
 							<div class="accommodation__content">
 								<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 

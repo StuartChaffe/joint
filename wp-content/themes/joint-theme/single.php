@@ -123,7 +123,7 @@
 				<?php } ?>
 				<?php if($amenities) { ?>
 				<div class="property__item">
-					<p><strong>In this property</strong></p>
+					<p><strong>What's included</strong></p>
 					<div class="property__features-list">
 					<?php foreach ( $amenities as $amenity ) { 
 						$taximage = get_field('taxonomy_image', $amenity );

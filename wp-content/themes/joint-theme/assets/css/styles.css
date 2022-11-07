@@ -874,7 +874,6 @@ div[data-type="core/button"] div[data-block] {
   border: 16px solid white;
 }
 .gallery-nav--item {
-  border-radius: var(--border-radius);
   opacity: 0.7;
 }
 .gallery-nav--item img {

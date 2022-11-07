@@ -27,6 +27,7 @@ $tel = get_field('telephone', 'options');
 		</button>
 	</div>
 	<nav class="site-header--nav site-header--nav__mobile">
+		<div class="site-header--nav__contact">Call <a href="tel:<?php echo $tel; ?>"><?php echo $tel; ?></a> to book now!</div>
 		<?php wp_nav_menu( array('theme_location' => 'mobile') ); ?>
 		<div class="site-header--nav__image"><img src="<?php echo get_template_directory_uri(); ?>/src/images/menu-image.png" /></div>
 	</nav>

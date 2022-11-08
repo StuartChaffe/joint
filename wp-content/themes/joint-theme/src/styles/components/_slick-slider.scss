@@ -182,9 +182,12 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-	left: -32px;
+	left: -1.5rem;
 	
 	@include mq(medium) {
+		left: 1rem;
+	}
+	@include mq(xlarge) {
 		left: -72px;
 	}
 	// padding: 0 1rem 0 2rem;
@@ -202,8 +205,11 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-	right: -32px;
+	right: -1.5rem;
 	@include mq(medium) {
+		right: 1rem;
+	}
+	@include mq(xlarge) {
 		right: -72px;
 	}
 	// padding: 0 2rem 0 1rem;

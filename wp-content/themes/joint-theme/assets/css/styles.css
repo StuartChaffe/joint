@@ -1230,9 +1230,14 @@ p + p .btn {
 }
 
 .slick-prev {
-  left: -32px;
+  left: -1.5rem;
 }
 @media (min-width: 50em) {
+  .slick-prev {
+    left: 1rem;
+  }
+}
+@media (min-width: 80em) {
   .slick-prev {
     left: -72px;
   }
@@ -1246,9 +1251,14 @@ p + p .btn {
 }
 
 .slick-next {
-  right: -32px;
+  right: -1.5rem;
 }
 @media (min-width: 50em) {
+  .slick-next {
+    right: 1rem;
+  }
+}
+@media (min-width: 80em) {
   .slick-next {
     right: -72px;
   }
@@ -2401,7 +2411,12 @@ body.nav-open {
 }
 @media (min-width: 50em) {
   .feature-properties {
-    padding: var(--spacing-xl) 1em;
+    padding: var(--spacing-xl) 1rem;
+  }
+}
+@media (min-width: 70em) {
+  .feature-properties {
+    padding: var(--spacing-xl) 0;
   }
 }
 .feature-properties__list {
@@ -2413,7 +2428,13 @@ body.nav-open {
 }
 @media (min-width: 50em) {
   .feature-properties__list {
+    padding: 0 3rem;
     flex-direction: row;
+  }
+}
+@media (min-width: 80em) {
+  .feature-properties__list {
+    padding: 0 0;
   }
 }
 .feature-properties__list .slick-slide {

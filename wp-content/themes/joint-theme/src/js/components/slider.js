@@ -68,13 +68,19 @@ jQuery(document).ready(function($) {
 		dots: false,
 		responsive: [
 			{
-				breakpoint: 930,
+				breakpoint: 1170,
 				settings: {
-				slidesToShow: 1,
+				slidesToShow: 3,
 				}
 			},
 			{
-				breakpoint: 400,
+				breakpoint: 670,
+				settings: {
+				slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 600,
 				settings: {
 				slidesToShow: 1,
 				}

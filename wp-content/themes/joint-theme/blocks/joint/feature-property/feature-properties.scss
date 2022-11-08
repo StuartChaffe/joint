@@ -8,7 +8,10 @@
 	padding: var(--spacing-xl) 2.5em;
 	text-align: center;
 	@include mq(medium) {
-		padding: var(--spacing-xl) 1em;
+		padding: var(--spacing-xl) 1rem;
+	}
+	@include mq(large) {
+		padding: var(--spacing-xl) 0;
 	}
 	&__list {
 		@extend .container;
@@ -20,13 +23,29 @@
 		margin-top: var(--spacing);
 
 		@include mq(medium) {
-			
+			padding: 0 3rem;
 			flex-direction: row;
+		}
+		@include mq(xlarge) {
+			padding: 0 0;
 		}
 
 		.slick-slide {
 			margin: 0 0.5rem;
 		}
+		// .slick-prev {
+		// 	@include mq($until: xlarge) {
+		// 		left: 0;
+		// 	}
+		// 	@include mq($until: xlarge) {
+		// 		left: 0;
+		// 	}
+		// }
+		// .slick-next {
+		// 	@include mq($until: xlarge) {
+		// 		right: 0;
+		// 	}
+		// }
 	}
 	&__item {
 		position: relative;

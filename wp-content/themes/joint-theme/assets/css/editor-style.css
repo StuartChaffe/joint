@@ -1327,7 +1327,12 @@ p + p .btn {
 }
 @media (min-width: 50em) {
   .feature-properties {
-    padding: var(--spacing-xl) 1em;
+    padding: var(--spacing-xl) 1rem;
+  }
+}
+@media (min-width: 70em) {
+  .feature-properties {
+    padding: var(--spacing-xl) 0;
   }
 }
 .feature-properties__list {
@@ -1339,7 +1344,13 @@ p + p .btn {
 }
 @media (min-width: 50em) {
   .feature-properties__list {
+    padding: 0 3rem;
     flex-direction: row;
+  }
+}
+@media (min-width: 80em) {
+  .feature-properties__list {
+    padding: 0 0;
   }
 }
 .feature-properties__list .slick-slide {

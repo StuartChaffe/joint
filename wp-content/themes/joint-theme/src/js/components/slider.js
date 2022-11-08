@@ -66,5 +66,19 @@ jQuery(document).ready(function($) {
 		arrows: true,
 		infinite: true,
 		dots: false,
+		responsive: [
+			{
+				breakpoint: 930,
+				settings: {
+				slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 400,
+				settings: {
+				slidesToShow: 1,
+				}
+			}
+		]
 	}); 
 });

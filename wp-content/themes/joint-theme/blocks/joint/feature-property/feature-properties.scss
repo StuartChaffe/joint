@@ -5,18 +5,22 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: var(--spacing-xl) 1em;
+	padding: var(--spacing-xl) 2.5em;
 	text-align: center;
+	@include mq(medium) {
+		padding: var(--spacing-xl) 1em;
+	}
 	&__list {
 		@extend .container;
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
+		
 		width: 100%;
 		margin-top: var(--spacing);
 
 		@include mq(medium) {
+			
 			flex-direction: row;
 		}
 

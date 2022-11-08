@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 		focusOnSelect: true
 	  });
 
-	$(".reviews-slider").slick({
+	  $(".reviews-slider").slick({
 		// settings: "unslick",
 		speed: 200,
 		slidesToShow: 2,
@@ -55,5 +55,16 @@ jQuery(document).ready(function($) {
 				}
 			}
 		]
+	}); 
+
+	$(".feature-properties__list").slick({
+		// settings: "unslick",
+		speed: 200,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: false,
+		arrows: true,
+		infinite: true,
+		dots: false,
 	}); 
 });

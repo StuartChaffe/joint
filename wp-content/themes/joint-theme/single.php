@@ -58,7 +58,7 @@
 					<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 
 						<?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
 					</h4>
-					<?php if($tour) { ?><a href="<?php echo $tour; ?>" target="_blank"><?php echo get_icon('tour'); ?> Take 3D Tour</a><?php } ?>
+					<?php if($tour) { ?><a href="<?php echo $tour; ?>" target="_blank" class="btn btn--tour">Take 3D Tour <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Space logo" /></a><?php } ?>
 				</div>
 
 				<div class="property__item">

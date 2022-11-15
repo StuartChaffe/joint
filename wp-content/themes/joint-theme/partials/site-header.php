@@ -10,7 +10,7 @@ $tel = get_field('telephone', 'options');
 			<?php if($logo) { ?>
 				<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
 			<?php } else { ?>
-			<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Space logo" />
+			<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Joint logo" />
 			<?php } ?>
 			</a>
 		</div>

@@ -1033,6 +1033,20 @@ p + p .btn {
   color: var(--color-primary);
 }
 
+.btn--tour {
+  position: relative;
+  background: var(--color-primary);
+  padding: 0.5rem 80px 0.5rem 1rem;
+  margin-top: 1.5rem;
+}
+.btn--tour img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  right: 5px;
+  width: 65px;
+}
+
 .global-alert {
   background: var(--color-primary);
   text-align: center;

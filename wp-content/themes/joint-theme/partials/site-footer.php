@@ -82,9 +82,11 @@ $popupcontent = get_field('modal_content', 'options');
 		</div>
 	</div>
 </footer>
+<?php if($popupcontent) { ?>
 <div class="modal">
 	<div class="modal--inner">
 		<button class="modal--close" aria-label="Close">✕</button>
 		<?php echo $popupcontent ?>
 	</div>
 </div>
+<?php } ?>

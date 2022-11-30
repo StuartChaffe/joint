@@ -928,6 +928,90 @@ div[data-type="core/button"] div[data-block] {
   margin-right: 5px;
 }
 
+.modal {
+  padding: var(--spacing-xs);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483647;
+  background: #333;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 50em) {
+  .modal {
+    padding: var(--spacing-l);
+    padding-top: 1.5rem;
+  }
+}
+.modal--inner {
+  position: relative;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--spacing);
+  padding-top: 1.5rem;
+  top: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-text-base);
+  overflow: auto;
+  height: calc(100% - 40px);
+}
+@media (min-width: 50em) {
+  .modal--inner {
+    padding: var(--spacing-l);
+    padding-top: 1.5rem;
+    width: 60%;
+  }
+}
+.modal--inner .logo {
+  width: 250px;
+  margin-bottom: 1rem;
+}
+.modal--inner img, .modal--inner .size-full {
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+.modal--inner .btn {
+  margin-top: 1rem;
+  font-size: 22px;
+}
+.modal--inner h3 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+}
+.modal--inner p {
+  color: var(--color-text-base);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.modal--inner button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal.noshow {
+  display: none;
+}
+
 .btn,
 input[type=button],
 input[type=submit],

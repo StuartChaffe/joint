@@ -1,3 +1,6 @@
+<?php 
+$popupcontent = get_field('modal_content', 'options');
+?>
 <footer class="site-footer">
 	<div class="site-footer__inner">
 		<div class="site-footer__left">
@@ -79,3 +82,9 @@
 		</div>
 	</div>
 </footer>
+<div class="modal">
+	<div class="modal--inner">
+		<button class="modal--close" aria-label="Close">✕</button>
+		<?php echo $popupcontent ?>
+	</div>
+</div>

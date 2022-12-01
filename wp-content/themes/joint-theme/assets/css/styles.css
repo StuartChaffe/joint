@@ -938,8 +938,8 @@ div[data-type="core/button"] div[data-block] {
   z-index: 2147483647;
   background: #333;
   background: rgba(0, 0, 0, 0.8);
-  opacity: 1;
-  visibility: visible;
+  display: none;
+  visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
 @media (min-width: 50em) {
@@ -1002,18 +1002,12 @@ div[data-type="core/button"] div[data-block] {
   cursor: pointer;
 }
 
-.modal.show {
+.modal.is-visible {
   opacity: 1;
   visibility: visible;
   display: block;
   transition: all 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0.8);
-}
-
-.modal.noshow {
-  opacity: 0;
-  visibility: hidden;
-  display: none;
 }
 
 .btn,

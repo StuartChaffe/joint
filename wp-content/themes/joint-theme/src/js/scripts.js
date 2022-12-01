@@ -8,10 +8,29 @@ import './components/accordion';
 import './components/menu';
 import './components/slider';
 
+// jQuery(document).ready(function($) {
+// 	$('.modal--close').click(function() {
+// 		$('.modal').addClass('noshow');
+// 	});
+// });
+
 jQuery(document).ready(function($) {
-	$('.modal--close').click(function() {
-		$('.modal').addClass('noshow');
-	});
+  var cookie = localStorage.getItem('hideModal');
+  
+  // if local storage key isn't found, set it to false
+	if (cookie === null) {
+		localStorage.setItem('hideModal', 'false');
+	}
+  
+  // If key is false or not set, show banner
+	if (cookie === 'false' || cookie === null) {
+    $('.modal').addClass('is-visible');
+	}
+  
+  $('.modal__close').click(function() {
+    $('.modal').removeClass('is-visible');
+		localStorage.setItem('hideModal', 'true');
+  });
 });
 
 // (function () {

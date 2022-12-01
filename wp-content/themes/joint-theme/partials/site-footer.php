@@ -1,4 +1,5 @@
 <?php 
+$popup = get_field('show_popup');
 $popupcontent = get_field('modal_content', 'options');
 ?>
 <footer class="site-footer">
@@ -82,7 +83,7 @@ $popupcontent = get_field('modal_content', 'options');
 		</div>
 	</div>
 </footer>
-<?php if($popupcontent) { ?>
+<?php if ( $popup  == '1' ) { ?>
 <div class="modal">
 	<div class="modal--inner">
 		<button class="modal--close" aria-label="Close">✕</button>

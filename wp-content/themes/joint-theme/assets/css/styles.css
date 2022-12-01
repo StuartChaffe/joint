@@ -936,10 +936,10 @@ div[data-type="core/button"] div[data-block] {
   bottom: 0;
   left: 0;
   z-index: 2147483647;
-  background: #333;
   background: rgba(0, 0, 0, 0.8);
   display: none;
   visibility: hidden;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
 }
 @media (min-width: 50em) {

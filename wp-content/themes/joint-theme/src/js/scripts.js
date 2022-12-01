@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
     $('.modal').addClass('is-visible');
 	}
   
-  $('.modal__close').click(function() {
+  $('.modal--close').click(function() {
     $('.modal').removeClass('is-visible');
 		localStorage.setItem('hideModal', 'true');
   });

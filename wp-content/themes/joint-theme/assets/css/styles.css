@@ -949,6 +949,7 @@ div[data-type="core/button"] div[data-block] {
   }
 }
 .modal--inner {
+  border-radius: 10px;
   position: relative;
   background: white;
   display: flex;

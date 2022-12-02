@@ -955,13 +955,14 @@ div[data-type="core/button"] div[data-block] {
   flex-direction: column;
   justify-content: center;
   padding: var(--spacing);
-  padding-top: 1.5rem;
-  top: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 90%;
+  max-width: 800px;
   margin: 0 auto;
   color: var(--color-text-base);
   overflow: auto;
-  height: calc(100% - 40px);
+  height: 600px;
 }
 @media (min-width: 50em) {
   .modal--inner {

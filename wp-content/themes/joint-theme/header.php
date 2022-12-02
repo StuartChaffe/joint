@@ -38,6 +38,5 @@
 
 <a id="skip-nav" class="skip-nav screen-reader-text" href="#content">Skip to main content</a>
 
-<?php get_template_part('partials/global', 'alert'); ?>
 <?php get_template_part('partials/site', 'header'); ?>
 <div class="global-container">

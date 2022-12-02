@@ -953,12 +953,11 @@ div[data-type="core/button"] div[data-block] {
   background: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
   padding: var(--spacing);
   padding-top: 1.5rem;
   top: 20px;
   width: 90%;
-  max-width: 600px;
   margin: 0 auto;
   color: var(--color-text-base);
   overflow: auto;

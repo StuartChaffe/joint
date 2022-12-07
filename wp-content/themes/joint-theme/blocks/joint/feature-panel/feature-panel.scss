@@ -47,6 +47,7 @@
 	&__image {
 		display: flex;
 		justify-content: center;
+		align-self: stretch;
 		@include mq($until: medium) {
 			padding-top: 0;
 			padding-bottom: var(--spacing-l);

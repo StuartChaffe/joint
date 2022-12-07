@@ -12,10 +12,12 @@ $image			= get_field('image');
 $imagepos		= get_field('image_position');
 $textpos		= get_field('text_position');
 $imagetype		= get_field('image_type');
+$size			= get_field('panel_size');
 $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button', 'core/list' );
 $bkg			= get_field('bkg_colour');
 ?>
-<section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?><?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?>">
+<?php if ($size == 'Contained') { ?> <div class="bkg--white ptb-l"><?php } ?>
+<section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?><?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?> <?php if ($size == 'Contained') { ?> feature-panel--contained<?php } ?>">
 	<?php if ($image) { ?>
 	<div class="feature-panel__item feature-panel__image<?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?>">
 		<?php if ($imagetype == 'feature-panel__image--bkg') { ?><div class="feature-panel--bkg__image"><?php } ?>
@@ -27,3 +29,4 @@ $bkg			= get_field('bkg_colour');
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $allowed_blocks ) ) . '" />'; ?>
 	</div>
 </section>
+<?php if ($size == 'Contained') { ?> </div><?php } ?>

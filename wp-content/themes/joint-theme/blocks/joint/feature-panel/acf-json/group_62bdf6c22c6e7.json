@@ -32,6 +32,32 @@
             "placeholder": ""
         },
         {
+            "key": "field_63907a583db8a",
+            "label": "Size",
+            "name": "panel_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Full": "Full",
+                "Contained": "Contained"
+            },
+            "default_value": "Full",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_62bdf7753587d",
             "label": "Image",
             "name": "image",
@@ -161,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666264562
+    "modified": 1670412934
 }

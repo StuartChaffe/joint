@@ -2382,6 +2382,11 @@ body.nav-open {
     flex-direction: row;
   }
 }
+.feature-panel--contained {
+  margin-left: var(--spacing-xl) !important;
+  margin-right: var(--spacing-xl) !important;
+  border-radius: var(--border-radius);
+}
 .feature-panel__item {
   width: 100%;
   padding: var(--spacing-l) var(--spacing);
@@ -2682,6 +2687,11 @@ body.nav-open {
 
 .mb-s {
   margin-bottom: var(--spacing-s) !important;
+}
+
+.ptb-l {
+  padding-top: var(--spacing-xl) !important;
+  padding-bottom: var(--spacing-xl) !important;
 }
 
 img.alignright {

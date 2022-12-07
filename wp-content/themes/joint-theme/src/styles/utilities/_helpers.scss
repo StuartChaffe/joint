@@ -25,6 +25,9 @@
 .mb { margin-bottom: var(--spacing)!important; }
 .mb-s { margin-bottom: var(--spacing-s)!important; }
 
+.ptb-l { padding-top: var(--spacing-xl)!important; padding-bottom: var(--spacing-xl)!important; }
+
+
 // WordPress specifc
 img.alignright      { float: right; margin: 0 0 1em 1em; }
 img.alignleft       { float: left; margin: 0 1em 1em 0; }

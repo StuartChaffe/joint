@@ -6,6 +6,12 @@
 	@include mq(medium) {
 		flex-direction: row;
 	}
+	&--contained {
+		margin-left: var(--spacing-xl) !important;
+		margin-right: var(--spacing-xl) !important;
+		border-radius: var(--border-radius);
+		// background-color: transparent !important;
+	}
 	&__item {
 		width: 100%;
 		padding: var(--spacing-l) var(--spacing);

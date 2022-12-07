@@ -1256,7 +1256,6 @@ p + p .btn {
 .feature-panel__image {
   display: flex;
   justify-content: center;
-  align-self: stretch;
 }
 @media (max-width: 49.99em) {
   .feature-panel__image {

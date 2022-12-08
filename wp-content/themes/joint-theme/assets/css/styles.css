@@ -2154,6 +2154,9 @@ body.nav-open {
   border-radius: var(--border-radius);
   margin-bottom: var(--spacing);
 }
+.accordion__item:last-child {
+  margin-bottom: 0;
+}
 
 .accordion__handle {
   display: flex;

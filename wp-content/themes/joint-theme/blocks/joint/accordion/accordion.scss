@@ -10,6 +10,9 @@
 	background-color: var(--color-primary);
 	border-radius: var(--border-radius);
 	margin-bottom: var(--spacing);
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .accordion__handle {

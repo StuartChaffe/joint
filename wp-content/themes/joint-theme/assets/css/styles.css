@@ -2239,7 +2239,7 @@ body.nav-open {
 .accordion__body ul, .accordion__body ol {
   list-style: auto;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   padding-left: 1em;
 }
 .accordion__body ul li, .accordion__body ol li {

@@ -47,7 +47,6 @@ function origin_gutenberg_setup() {
 add_action( 'after_setup_theme', 'origin_gutenberg_setup' );
 
 
-
 /**
  * Remove Gutenberg styling - Uncomment this add_action if you want to remove styles
  */

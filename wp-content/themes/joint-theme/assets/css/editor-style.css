@@ -975,14 +975,17 @@ p + p .btn {
 }
 
 .accordion {
-  max-width: var(--content-width);
-  margin-top: var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
-  padding: 0;
+  padding: var(--spacing-xl);
+}
+.accordion--title {
+  text-align: center;
+  margin-bottom: var(--spacing);
 }
 
 .accordion__item {
-  border-top: 1px solid var(--color-grey-light);
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing);
 }
 
 .accordion__handle {
@@ -992,34 +995,35 @@ p + p .btn {
   width: 100%;
   text-align: left;
   margin: 0;
-  padding: var(--spacing) 0;
+  padding: var(--spacing-s) var(--spacing);
   border: 0;
+  border-radius: 0;
   background: transparent;
   cursor: pointer;
-  border-top: 1px solid var(--color-grey-tint);
+}
+.accordion__handle:hover, .accordion__handle:active, .accordion__handle:focus {
+  background: transparent;
 }
 
 .accordion__title {
   margin: 0 !important;
-  color: var(--color-text-dark);
-  text-transform: uppercase;
-  font-size: var(--font-size-h5);
+  color: white;
+  font-size: var(--font-size-h3);
   flex: 1;
 }
 .is-active .accordion__title {
-  color: var(--color-primary);
+  color: white;
 }
 
 .accordion__icon {
   position: relative;
   width: 20px;
   height: 20px;
-  margin: 0 var(--spacing);
 }
 .accordion__icon:before, .accordion__icon:after {
   content: "";
   position: absolute;
-  background: var(--color-text-base);
+  background: white;
   transition: transform 0.25s ease-out;
 }
 .accordion__icon:before {
@@ -1045,13 +1049,35 @@ p + p .btn {
 
 .accordion__body {
   display: none;
-  padding-bottom: var(--spacing-l);
+  padding: var(--spacing);
+  color: white;
+}
+.accordion__body--left {
+  width: 33.3333333333%;
+  margin-right: var(--spacing);
+}
+.accordion__body--left img {
+  width: 100%;
+}
+.accordion__body--right {
+  width: 66.6666666667%;
+  margin-left: var(--spacing);
 }
 .accordion__body p:first-child {
   margin-top: 0;
 }
 .accordion__body.is-open {
-  display: block;
+  display: flex;
+}
+.accordion__body ul, .accordion__body ol {
+  list-style: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1em;
+}
+.accordion__body ul li, .accordion__body ol li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .banner {
@@ -1624,4 +1650,19 @@ img.aligncenter {
 }
 .text--bold {
   font-weight: var(--font-weight-bold);
+}
+
+.accordion--title .block-editor-inner-blocks {
+  display: block;
+}
+
+ul, ol {
+  list-style: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1em;
+}
+ul li, ol li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }

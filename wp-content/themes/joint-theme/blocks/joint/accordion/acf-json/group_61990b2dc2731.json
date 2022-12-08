@@ -16,10 +16,11 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "layout": "block",
+            "pagination": 0,
             "min": 1,
             "max": 0,
-            "layout": "row",
+            "collapsed": "",
             "button_label": "Add an accordion",
             "rows_per_page": 20,
             "sub_fields": [
@@ -45,8 +46,29 @@
                     "parent_repeater": "field_61990b2dc3e94"
                 },
                 {
+                    "key": "field_63920f7c76010",
+                    "label": "Content (left)",
+                    "name": "accordion_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_61990b2dc3e94"
+                },
+                {
                     "key": "field_61990b2dc4756",
-                    "label": "Body",
+                    "label": "Content (right)",
                     "name": "accordion_body",
                     "aria-label": "",
                     "type": "wysiwyg",
@@ -73,7 +95,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/custom-block-joint-1"
             }
         ]
     ],
@@ -86,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670516140
+    "modified": 1670519023
 }

@@ -1677,7 +1677,8 @@ img.aligncenter {
   font-weight: var(--font-weight-bold);
 }
 
-.accordion--title .block-editor-inner-blocks {
+.accordion--title .block-editor-inner-blocks,
+.meal-plan__title .block-editor-inner-blocks {
   display: block;
 }
 

@@ -17,7 +17,8 @@
 
 @import "utilities/helpers";
 
-.accordion--title {
+.accordion--title,
+.meal-plan__title {
 	.block-editor-inner-blocks {
 		display: block;
 	}

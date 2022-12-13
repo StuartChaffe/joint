@@ -1493,8 +1493,6 @@ p + p .btn {
   }
 }
 .grid-item {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   padding: var(--spacing);
   border-radius: var(--border-radius);
@@ -1506,6 +1504,17 @@ p + p .btn {
     margin-left: var(--spacing-s);
   }
 }
+@media (max-width: 49.99em) {
+  .grid--large .grid-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid--large .grid-item img {
+    margin-top: var(--spacing);
+    float: none;
+    order: 2;
+  }
+}
 @media (min-width: 50em) {
   .grid--large .grid-item {
     width: calc(50% - var(--spacing-l) / 2);
@@ -1513,9 +1522,16 @@ p + p .btn {
 }
 .grid--large .grid-item img {
   float: right;
-  max-width: 35%;
+  max-width: 50%;
+}
+@media (min-width: 50em) {
+  .grid--large .grid-item img {
+    max-width: 35%;
+  }
 }
 .grid--small .grid-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }

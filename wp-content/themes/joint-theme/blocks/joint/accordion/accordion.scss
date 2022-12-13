@@ -1,6 +1,10 @@
 .accordion {
-	padding: var(--spacing-xl);
+	padding: var(--spacing);
+	@include mq(medium) {
+		padding: var(--spacing-xl);
+	}
 	&--title {
+		width: 100%;
 		text-align: center;
 		margin-bottom: var(--spacing);
 	}
@@ -80,20 +84,30 @@
 
 .accordion__body {
 	display: none;
+	flex-direction: column;
 	padding: var(--spacing);
 	color: white;
+	@include mq(medium) {
+		flex-direction: row;
+	}
 
 	&--left {
-		width: calc(100% / 3);
-		margin-right: var(--spacing);
+		width: 100%;
+		@include mq(medium) {
+			width: calc(100% / 3);
+			margin-right: var(--spacing);
+		}
 
 		img {
 			width: 100%;
 		}
 	}
 	&--right {
-		width: calc(100% / 3 * 2);
-		margin-left: var(--spacing);
+		width: 100%;
+		@include mq(medium) {
+			width: calc(100% / 3 * 2);
+			margin-left: var(--spacing);
+		}
 	}
 
 	p:first-child {

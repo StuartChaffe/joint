@@ -2695,6 +2695,7 @@ body.nav-open {
   margin: var(--spacing-s) 0 var(--spacing) 0;
 }
 .grid--small .grid-item img {
+  padding-top: var(--spacing);
   margin-top: auto;
 }
 

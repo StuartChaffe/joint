@@ -26,7 +26,7 @@ button,
 		text-decoration: none;
 	}
 	a {
-		color: var(--color-text-dark);
+		color: white;
 		text-decoration: none;
 		&:hover, &:focus {
 			text-decoration: none;
@@ -36,6 +36,16 @@ button,
 		margin-left: 0.5rem;
 	}
 }
+
+span.btn {
+	padding: 0;
+	a {
+		@extend .btn;
+		// padding: 0.25rem 1.8rem;
+		// background-color: var(--color-secondary);
+		// border-radius: 100px;
+	}
+}
 // .wp-block-button__link {
 // 	background-color: transparent;
 // }
@@ -43,12 +53,15 @@ button,
 	margin-top: var(--spacing);
 }
 
-.btn--primary {
-	border: 2px solid white;
-	color: white;
-
+span.btn--primary {
+	padding: 0;
+	a {
+		@extend .btn;
+		background-color: white;
+		color: var(--color-text-dark);
+	}
 	&:hover, &:focus {
-		border: 2px solid  var(--color-text-dark);
+		color: white;
 	}
 }
 .btn--block {
@@ -79,7 +92,7 @@ button,
 // }
 
 p + p .btn {
-	margin-top: 1.5rem;
+	// margin-top: 1.5rem;
 }
 .link {
 	text-decoration: underline;

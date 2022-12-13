@@ -94,15 +94,15 @@ function my_custom_styles( $init_array ) {
 			'wrapper' => false,
 		), 
 		array(  
-			'title' => 'Green button',  
+			'title' => 'Orange button',  
 			'block' => 'span',  
 			'classes' => 'btn',
 			'wrapper' => false,
 		),  
 		array(  
-			'title' => 'Border button',  
+			'title' => 'White button',  
 			'block' => 'span',  
-			'classes' => 'btn btn--secondary',
+			'classes' => 'btn btn--primary',
 			'wrapper' => false,
 		), 
 		array(  

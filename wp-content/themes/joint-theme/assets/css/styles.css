@@ -978,7 +978,7 @@ div[data-type="core/button"] div[data-block] {
   width: 100%;
   margin: 0 0 1rem 0;
 }
-.modal--inner .btn {
+.modal--inner .btn, .modal--inner span.btn--primary a, span.btn--primary .modal--inner a, .modal--inner span.btn a, span.btn .modal--inner a {
   margin-top: 1rem;
   font-size: 22px;
 }
@@ -1009,7 +1009,7 @@ div[data-type="core/button"] div[data-block] {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.btn,
+.btn, span.btn--primary a, span.btn a,
 input[type=button],
 input[type=submit],
 button,
@@ -1028,7 +1028,7 @@ button,
   text-decoration: none;
   background-color: var(--color-secondary);
 }
-.btn:hover, .btn:focus,
+.btn:hover, span.btn--primary a:hover, span.btn a:hover, .btn:focus, span.btn--primary a:focus, span.btn a:focus,
 input[type=button]:hover,
 input[type=button]:focus,
 input[type=submit]:hover,
@@ -1044,16 +1044,16 @@ button:focus,
   outline: 0;
   text-decoration: none;
 }
-.btn a,
+.btn a, span.btn--primary a a, span.btn a a,
 input[type=button] a,
 input[type=submit] a,
 button a,
 .wp-block-button__link a,
 .wp-block-button__link:visited a {
-  color: var(--color-text-dark);
+  color: white;
   text-decoration: none;
 }
-.btn a:hover, .btn a:focus,
+.btn a:hover, span.btn--primary a a:hover, .btn a:focus, span.btn--primary a a:focus,
 input[type=button] a:hover,
 input[type=button] a:focus,
 input[type=submit] a:hover,
@@ -1066,25 +1066,39 @@ button a:focus,
 .wp-block-button__link:visited a:focus {
   text-decoration: none;
 }
-.btn + .btn,
+.btn + .btn, span.btn--primary a + .btn, span.btn--primary .btn + a, span.btn--primary a + a, span.btn a + .btn, span.btn .btn + a, span.btn a + a,
 input[type=button] + .btn,
+span.btn--primary input[type=button] + a,
+span.btn input[type=button] + a,
 input[type=submit] + .btn,
+span.btn--primary input[type=submit] + a,
+span.btn input[type=submit] + a,
 button + .btn,
+span.btn--primary button + a,
+span.btn button + a,
 .wp-block-button__link + .btn,
+span.btn--primary .wp-block-button__link + a,
+span.btn .wp-block-button__link + a,
 .wp-block-button__link:visited + .btn {
   margin-left: 0.5rem;
 }
 
+span.btn {
+  padding: 0;
+}
 .wp-block-button {
   margin-top: var(--spacing);
 }
 
-.btn--primary {
-  border: 2px solid white;
-  color: white;
+span.btn--primary {
+  padding: 0;
 }
-.btn--primary:hover, .btn--primary:focus {
-  border: 2px solid var(--color-text-dark);
+span.btn--primary a {
+  background-color: white;
+  color: var(--color-text-dark);
+}
+span.btn--primary:hover, span.btn--primary:focus {
+  color: white;
 }
 
 .btn--block {
@@ -1101,10 +1115,6 @@ button + .btn,
 }
 .btn--block a:hover, .btn--block a:focus {
   text-decoration: none;
-}
-
-p + p .btn {
-  margin-top: 1.5rem;
 }
 
 .link {
@@ -1511,7 +1521,7 @@ p + p .btn {
     display: block;
   }
 }
-.site-header__content .btn {
+.site-header__content .btn, .site-header__content span.btn a, span.btn .site-header__content a, .site-header__content span.btn--primary a, span.btn--primary .site-header__content a {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-bold);
   margin-left: 0.5rem;
@@ -2093,11 +2103,11 @@ body.nav-open {
     padding-left: var(--spacing-s);
   }
 }
-.accommodation__content .btn {
+.accommodation__content .btn, .accommodation__content span.btn a, span.btn .accommodation__content a, .accommodation__content span.btn--primary a, span.btn--primary .accommodation__content a {
   width: 100%;
 }
 @media (min-width: 50em) {
-  .accommodation__content .btn {
+  .accommodation__content .btn, .accommodation__content span.btn a, span.btn .accommodation__content a, .accommodation__content span.btn--primary a, span.btn--primary .accommodation__content a {
     width: 50%;
   }
 }
@@ -2604,14 +2614,14 @@ body.nav-open {
 .feature-properties__item p {
   margin-bottom: 0;
 }
-.feature-properties__item .btn {
+.feature-properties__item .btn, .feature-properties__item span.btn a, span.btn .feature-properties__item a, .feature-properties__item span.btn--primary a, span.btn--primary .feature-properties__item a {
   margin-top: auto;
 }
 .feature-properties__item:hover {
   text-decoration: none;
   color: var(--color-text-base);
 }
-.feature-properties__item:hover .btn {
+.feature-properties__item:hover .btn, .feature-properties__item:hover span.btn a, span.btn .feature-properties__item:hover a, .feature-properties__item:hover span.btn--primary a, span.btn--primary .feature-properties__item:hover a {
   background-color: black;
 }
 .feature-properties__image {

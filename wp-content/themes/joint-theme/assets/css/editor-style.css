@@ -1493,16 +1493,22 @@ p + p .btn {
   }
 }
 .grid-item {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: var(--spacing);
   border-radius: var(--border-radius);
   margin-bottom: var(--spacing);
 }
 @media (min-width: 50em) {
-  .grid--large .grid-item {
-    width: calc(50% - var(--spacing-l) / 2);
+  .grid-item {
     margin-right: var(--spacing-s);
     margin-left: var(--spacing-s);
+  }
+}
+@media (min-width: 50em) {
+  .grid--large .grid-item {
+    width: calc(50% - var(--spacing-l) / 2);
   }
 }
 .grid--large .grid-item img {
@@ -1510,17 +1516,17 @@ p + p .btn {
   max-width: 35%;
 }
 .grid--small .grid-item {
-  margin-right: var(--spacing);
-  margin-left: var(--spacing);
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
 }
+@media (max-width: 49.99em) {
+  .grid--small .grid-item {
+    margin-right: var(--spacing);
+    margin-left: var(--spacing);
+  }
+}
 @media (min-width: 50em) {
   .grid--small .grid-item {
-    margin-right: var(--spacing-s);
-    margin-left: var(--spacing-s);
     width: calc(50% - var(--spacing-l) / 2);
   }
 }

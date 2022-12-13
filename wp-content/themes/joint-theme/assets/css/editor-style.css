@@ -1528,6 +1528,7 @@ p + p .btn {
   margin: var(--spacing-s) 0 var(--spacing) 0;
 }
 .grid--small .grid-item img {
+  max-width: 90%;
   padding-top: var(--spacing);
   margin-top: auto;
 }

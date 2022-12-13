@@ -995,7 +995,12 @@ span.btn--primary:hover, span.btn--primary:focus {
 .accordion--title {
   width: 100%;
   text-align: center;
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing-s);
+}
+@media (min-width: 50em) {
+  .accordion--title {
+    margin-bottom: var(--spacing-l);
+  }
 }
 
 .accordion__item {

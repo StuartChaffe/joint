@@ -11,6 +11,7 @@ Allow Multiple: true
 $bkg	= get_field('bkg_colour');
 $type	= get_field('grid_type');
 $grid	= get_field('grid');
+$content = get_field('grid_content', false, false);
 $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button', 'core/image' );
 
 if($grid) {

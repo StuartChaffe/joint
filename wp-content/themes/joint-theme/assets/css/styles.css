@@ -2691,8 +2691,11 @@ body.nav-open {
     width: calc(33.3333333333% - var(--spacing-l) / 2);
   }
 }
+.grid--small .grid-item h2, .grid--small .grid-item h3, .grid--small .grid-item h4 {
+  margin: var(--spacing-s) 0 var(--spacing) 0;
+}
 .grid--small .grid-item img {
-  max-width: 80%;
+  margin-top: auto;
 }
 
 .meal-plan {

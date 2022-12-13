@@ -28,9 +28,13 @@
 	&--large {
 		.grid-item {
 			@include mq(medium) {
-				width: calc(100% / 3 - (var(--spacing-l) / 2));
+				width: calc(100% / 2 - (var(--spacing-l) / 2));
 				margin-right: var(--spacing-s);
 				margin-left: var(--spacing-s);
+			}
+			img {
+				float: right;
+				max-width: 35%;
 			}
 		}
 	}

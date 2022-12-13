@@ -1500,10 +1500,14 @@ p + p .btn {
 }
 @media (min-width: 50em) {
   .grid--large .grid-item {
-    width: calc(33.3333333333% - var(--spacing-l) / 2);
+    width: calc(50% - var(--spacing-l) / 2);
     margin-right: var(--spacing-s);
     margin-left: var(--spacing-s);
   }
+}
+.grid--large .grid-item img {
+  float: right;
+  max-width: 35%;
 }
 .grid--small .grid-item {
   margin-right: var(--spacing);

@@ -49,6 +49,12 @@
 			@include mq(medium) {
 				margin-right: var(--spacing-s);
 				margin-left: var(--spacing-s);
+				width: calc(100% / 2 - (var(--spacing-l) / 2));
+				
+			}
+			@include mq(large) {
+				margin-right: var(--spacing-s);
+				margin-left: var(--spacing-s);
 				width: calc(100% / 3 - (var(--spacing-l) / 2));
 				
 			}

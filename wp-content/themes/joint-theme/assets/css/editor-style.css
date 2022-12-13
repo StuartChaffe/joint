@@ -1521,6 +1521,13 @@ p + p .btn {
   .grid--small .grid-item {
     margin-right: var(--spacing-s);
     margin-left: var(--spacing-s);
+    width: calc(50% - var(--spacing-l) / 2);
+  }
+}
+@media (min-width: 70em) {
+  .grid--small .grid-item {
+    margin-right: var(--spacing-s);
+    margin-left: var(--spacing-s);
     width: calc(33.3333333333% - var(--spacing-l) / 2);
   }
 }

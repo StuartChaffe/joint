@@ -1796,13 +1796,13 @@ span.btn--primary:hover, span.btn--primary:focus {
 }
 
 .ptb-l {
-  padding-top: var(--spacing) !important;
-  padding-bottom: var(--spacing) !important;
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
 }
 @media (min-width: 50em) {
   .ptb-l {
-    padding-top: var(--spacing-xl) !important;
-    padding-bottom: var(--spacing-xl) !important;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
   }
 }
 

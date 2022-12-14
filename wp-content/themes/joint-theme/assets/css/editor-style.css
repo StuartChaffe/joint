@@ -1873,6 +1873,13 @@ img.aligncenter {
 .bkg--grey {
   background-color: var(--color-grey);
 }
+.bkg--grey + .bkg--grey {
+  margin-top: 0;
+  padding-top: 0;
+}
+.bkg--grey + .bkg--grey .feature-panel__item {
+  padding-top: 0;
+}
 .bkg--pink {
   background-color: var(--color-quaternary);
 }

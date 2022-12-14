@@ -88,6 +88,13 @@ img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 	}
 	&--grey {
 		background-color: var(--color-grey);
+		+  .bkg--grey {
+			margin-top: 0;
+			padding-top: 0;
+			.feature-panel__item {
+				padding-top: 0;
+			}
+		}
 	}
 	&--pink {
 		background-color: var(--color-quaternary);

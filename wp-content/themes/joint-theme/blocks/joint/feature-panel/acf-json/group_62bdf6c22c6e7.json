@@ -73,10 +73,11 @@
             },
             "choices": {
                 "Feature": "Feature",
-                "Tips": "Tips"
+                "Tips": "Tips",
+                "Both Text": "Both Text"
             },
             "default_value": false,
-            "return_format": "",
+            "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
             "ui": 0,
@@ -91,14 +92,21 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "!=",
+                        "value": "Both Text"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "return_format": "array",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -106,7 +114,8 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_62bdf7853587e",
@@ -116,7 +125,15 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "!=",
+                        "value": "Both Text"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -181,8 +198,8 @@
                 [
                     {
                         "field": "field_6399b544f3472",
-                        "operator": "==",
-                        "value": "Feature"
+                        "operator": "!=",
+                        "value": "Tips"
                     }
                 ]
             ],
@@ -276,6 +293,34 @@
                     "parent_repeater": "field_6399b5ae0cad9"
                 }
             ]
+        },
+        {
+            "key": "field_6399fd9fa7807",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Both Text"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -296,5 +341,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671018536
+    "modified": 1671036644
 }

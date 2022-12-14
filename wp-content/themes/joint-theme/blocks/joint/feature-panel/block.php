@@ -15,6 +15,7 @@ $imagetype		= get_field('image_type');
 $size			= get_field('panel_size');
 $type			= get_field('panel_type');
 $tips			= get_field('tips');
+$content		= get_field('content');
 $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button', 'core/list' );
 $bkg			= get_field('bkg_colour');
 ?>
@@ -40,5 +41,10 @@ $bkg			= get_field('bkg_colour');
 			<?php } ?>
 		<?php } ?>
 	</div>
+	<?php if($content) { ?>
+		<div class="feature-panel__item feature-panel__text">
+			<?php echo $content; ?>
+		</div>
+	<?php } ?>
 </section>
 <?php if ($size == 'Contained') { ?> </div><?php } ?>

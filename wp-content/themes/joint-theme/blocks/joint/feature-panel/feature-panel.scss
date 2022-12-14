@@ -6,6 +6,41 @@
 	@include mq(medium) {
 		flex-direction: row;
 	}
+
+	&__tips {
+		.feature-panel__item {
+			padding: var(--spacing-l);
+		}
+		.feature-panel__text {
+			@include mq(large) {
+				width: 70%;
+				padding-right: 0;
+			}
+
+			h3 {
+				min-width: 90px;
+				margin-bottom: 0;
+			}
+		}
+		.feature-panel__image {
+			@include mq(large) {
+				width: 30%;
+				padding-left: 0;
+				padding-right: var(--spacing);
+			}
+		}
+		&-list {
+			margin-top: var(--spacing-s);
+			&-item {
+				display: flex;
+				align-items: center;
+				margin-bottom: var(--spacing-s);
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 	&--contained {
 		margin-left: var(--spacing-xl) !important;
 		margin-right: var(--spacing-xl) !important;

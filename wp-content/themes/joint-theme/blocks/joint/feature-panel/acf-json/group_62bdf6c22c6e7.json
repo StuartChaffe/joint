@@ -58,6 +58,32 @@
             "placeholder": ""
         },
         {
+            "key": "field_6399b544f3472",
+            "label": "Type",
+            "name": "panel_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Feature": "Feature",
+                "Tips": "Tips"
+            },
+            "default_value": false,
+            "return_format": "",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_62bdf7753587d",
             "label": "Image",
             "name": "image",
@@ -90,14 +116,7 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_62bdf7753587d",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -109,10 +128,10 @@
                 "feature-panel__bkg-image": "Background"
             },
             "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
             "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
             "ajax": 0,
             "placeholder": ""
         },
@@ -124,7 +143,15 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Feature"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -150,7 +177,15 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Feature"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -167,6 +202,80 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_6399b5ae0cad9",
+            "label": "Tips",
+            "name": "tips",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Tips"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6399b5c30cada",
+                    "label": "Title",
+                    "name": "tip_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6399b5ae0cad9"
+                },
+                {
+                    "key": "field_6399b5d20cadb",
+                    "label": "Content",
+                    "name": "tip_content",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6399b5ae0cad9"
+                }
+            ]
         }
     ],
     "location": [
@@ -187,5 +296,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670412934
+    "modified": 1671018536
 }

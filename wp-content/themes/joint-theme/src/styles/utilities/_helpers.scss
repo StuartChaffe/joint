@@ -25,7 +25,11 @@
 .mb { margin-bottom: var(--spacing)!important; }
 .mb-s { margin-bottom: var(--spacing-s)!important; }
 
-.ptb-l { padding-top: var(--spacing-xl)!important; padding-bottom: var(--spacing-xl)!important; }
+.ptb-l { padding-top: var(--spacing)!important; padding-bottom: var(--spacing)!important;
+	@include mq(medium) {
+		padding-top: var(--spacing-xl)!important; padding-bottom: var(--spacing-xl)!important;
+	}
+}
 
 
 // WordPress specifc

@@ -1282,7 +1282,21 @@ span.btn--primary:hover, span.btn--primary:focus {
   }
 }
 .feature-panel__tips .feature-panel__item {
-  padding: var(--spacing-l);
+  padding: var(--spacing);
+}
+@media (min-width: 70em) {
+  .feature-panel__tips .feature-panel__item {
+    width: 50%;
+    padding: var(--spacing-l);
+  }
+}
+.feature-panel__tips .feature-panel__text {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .feature-panel__tips .feature-panel__text {
+    width: 60%;
+  }
 }
 @media (min-width: 70em) {
   .feature-panel__tips .feature-panel__text {
@@ -1293,6 +1307,14 @@ span.btn--primary:hover, span.btn--primary:focus {
 .feature-panel__tips .feature-panel__text h3 {
   min-width: 90px;
   margin-bottom: 0;
+}
+.feature-panel__tips .feature-panel__image {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .feature-panel__tips .feature-panel__image {
+    width: 40%;
+  }
 }
 @media (min-width: 70em) {
   .feature-panel__tips .feature-panel__image {
@@ -1306,16 +1328,26 @@ span.btn--primary:hover, span.btn--primary:focus {
 }
 .feature-panel__tips-list-item {
   display: flex;
-  align-items: center;
   margin-bottom: var(--spacing-s);
+}
+@media (min-width: 70em) {
+  .feature-panel__tips-list-item {
+    align-items: center;
+  }
 }
 .feature-panel__tips-list-item:last-child {
   margin-bottom: 0;
 }
 .feature-panel--contained {
-  margin-left: var(--spacing-xl) !important;
-  margin-right: var(--spacing-xl) !important;
+  margin-left: var(--spacing) !important;
+  margin-right: var(--spacing) !important;
   border-radius: var(--border-radius);
+}
+@media (min-width: 70em) {
+  .feature-panel--contained {
+    margin-left: var(--spacing-xl) !important;
+    margin-right: var(--spacing-xl) !important;
+  }
 }
 .feature-panel__item {
   width: 100%;
@@ -1764,8 +1796,14 @@ span.btn--primary:hover, span.btn--primary:focus {
 }
 
 .ptb-l {
-  padding-top: var(--spacing-xl) !important;
-  padding-bottom: var(--spacing-xl) !important;
+  padding-top: var(--spacing) !important;
+  padding-bottom: var(--spacing) !important;
+}
+@media (min-width: 50em) {
+  .ptb-l {
+    padding-top: var(--spacing-xl) !important;
+    padding-bottom: var(--spacing-xl) !important;
+  }
 }
 
 img.alignright {

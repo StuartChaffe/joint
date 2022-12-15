@@ -6,6 +6,23 @@
 	@include mq(medium) {
 		flex-direction: row;
 	}
+	&__central {
+		flex-direction: column;
+		.feature-panel__item {
+			align-items: center;
+			text-align: center;
+			width: 80%;
+			padding: 0;
+			+ .feature-panel__item {
+				padding-top: var(--spacing-l);
+				flex-direction: row;
+				img {
+					margin: 0 0.5rem;
+				}
+			}
+		}
+		padding: var(--spacing-xl);
+	}
 
 	&__tips {
 		.feature-panel__item {
@@ -160,9 +177,9 @@
 		}
 	}
 	
-	+ .feature-panel {
-		padding-top: 0;
-	}
+	// + .feature-panel {
+	// 	padding-top: 0;
+	// }
 	+ .feature-panel__bkg-image {
 		@include mq(medium) {
 			padding-top: var(--spacing-xl);

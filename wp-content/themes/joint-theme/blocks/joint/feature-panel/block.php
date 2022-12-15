@@ -20,7 +20,7 @@ $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button', 'core/
 $bkg			= get_field('bkg_colour');
 ?>
 <?php if ($size == 'Contained') { ?> <div class="bkg--white ptb-l"><?php } ?>
-<section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?><?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?> <?php if ($size == 'Contained') { ?> feature-panel--contained<?php } ?><?php if ($type == 'Tips') { ?> feature-panel__tips<?php } ?>">
+<section class="feature-panel<?php if ($image) { ?> <?php echo $imagepos; ?><?php } ?> <?php echo $bkg; ?><?php if ( $textpos == 'feature-panel__text--top' ) { ?> <?php echo $textpos; ?><?php } ?><?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?><?php if ($size == 'Contained') { ?> feature-panel--contained<?php } ?><?php if ($type == 'Tips') { ?> feature-panel__tips<?php } ?><?php if ($type == 'Central') { ?> feature-panel__central<?php } ?>">
 	<?php if ($image) { ?>
 	<div class="feature-panel__item feature-panel__image<?php if ($imagetype == 'feature-panel__image--bkg') { ?> <?php echo $imagetype; ?><?php } ?>">
 		<?php if ($imagetype == 'feature-panel__image--bkg') { ?><div class="feature-panel--bkg__image"><?php } ?>

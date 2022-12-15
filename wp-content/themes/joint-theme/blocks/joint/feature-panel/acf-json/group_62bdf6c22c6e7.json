@@ -74,6 +74,7 @@
             "choices": {
                 "Feature": "Feature",
                 "Tips": "Tips",
+                "Central": "Central",
                 "Both Text": "Both Text"
             },
             "default_value": false,
@@ -96,8 +97,15 @@
                 [
                     {
                         "field": "field_6399b544f3472",
-                        "operator": "!=",
-                        "value": "Both Text"
+                        "operator": "==",
+                        "value": "Feature"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Tips"
                     }
                 ]
             ],
@@ -129,8 +137,15 @@
                 [
                     {
                         "field": "field_6399b544f3472",
-                        "operator": "!=",
-                        "value": "Both Text"
+                        "operator": "==",
+                        "value": "Feature"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Tips"
                     }
                 ]
             ],
@@ -309,6 +324,13 @@
                         "operator": "==",
                         "value": "Both Text"
                     }
+                ],
+                [
+                    {
+                        "field": "field_6399b544f3472",
+                        "operator": "==",
+                        "value": "Central"
+                    }
                 ]
             ],
             "wrapper": {
@@ -341,5 +363,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671036644
+    "modified": 1671112877
 }

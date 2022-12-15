@@ -79,6 +79,9 @@
 		align-items: flex-start;
 		justify-content: center;
 		z-index: 1;
+		// + .feature-panel__text {
+		// 	padding-left: 0;
+		// }
 		&--top {
 			align-items: flex-start;
 			.feature-panel__text {

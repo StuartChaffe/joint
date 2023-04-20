@@ -39,6 +39,7 @@ $bkg			= get_field('bkg_colour');
 					<?php if ($item['tip_content']) { ?><?php echo $item['tip_content']; ?><?php } ?>
 				</div>
 			<?php } ?>
+			</div>
 		<?php } ?>
 	</div>
 	<?php if($content) { ?>

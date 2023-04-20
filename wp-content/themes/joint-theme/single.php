@@ -106,6 +106,46 @@
 				</div>
 				<?php } ?>
 
+			</div>
+			<div class="property__contact">
+
+				<?php if($benefits) { ?>
+				<div class="property__benefits hidemobile">
+					<?php foreach ( $benefits as $benefit ) { 
+						$taximage = get_field('taxonomy_image', $benefit );
+					?>
+						<div class="property__benefits-item">
+							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
+							<p class="text--green"><strong><?php echo $benefit->name ; ?></strong></p>
+						</div>
+					<?php } ?>
+				</div>
+				<?php } ?>
+
+				<div class="property__item">
+					<a href="//joint.local:3000/accommodation/92-newick-road/" class="btn mb-s">Enquire about this property</a>
+				</div>
+
+				<?php
+					$custom_terms = wp_get_post_terms( get_the_ID(), 'location');
+					$properties = new WP_Query( array(
+						
+						'post_type' => 'accommodation',
+						'posts_per_page' => 1,
+						'orderby' => 'rand',
+						'post__not_in' => array( $post->ID ),
+						'tax_query' => array(
+							array(
+								'field' => 'slug',
+								'taxonomy' => 'location',
+								// 'terms' => $accommodation,
+								'terms' => $custom_terms[0]->slug, 
+							),
+						),
+
+					));
+				?>
+
 				<div class="property__item">
 					<p><strong>In this property</strong></p>
 					<div class="property__features-list">
@@ -148,54 +188,6 @@
 					</div>
 				</div>
 				<?php } ?>
-
-			</div>
-			<div class="property__contact">
-
-				<?php if($benefits) { ?>
-				<div class="property__benefits hidemobile">
-					<?php foreach ( $benefits as $benefit ) { 
-						$taximage = get_field('taxonomy_image', $benefit );
-					?>
-						<div class="property__benefits-item">
-							<?php if($taximage) { ?><img src="<?php echo $taximage['url']; ?>" alt="<?php echo $taximage['alt']; ?>" /><?php } ?>
-							<p class="text--green"><strong><?php echo $benefit->name ; ?></strong></p>
-						</div>
-					<?php } ?>
-				</div>
-				<?php } ?>
-
-				<p><strong>Enquire about</strong><br />
-				<?php the_title(); ?>, <?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?></p>
-
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-				<script>
-				hbspt.forms.create({
-					region: "na1",
-					portalId: "7287208",
-					formId: "a0cc36ed-b82f-4a23-9c56-e0b1682792a2"
-				});
-				</script>
-
-				<?php
-					$custom_terms = wp_get_post_terms( get_the_ID(), 'location');
-					$properties = new WP_Query( array(
-						
-						'post_type' => 'accommodation',
-						'posts_per_page' => 1,
-						'orderby' => 'rand',
-						'post__not_in' => array( $post->ID ),
-						'tax_query' => array(
-							array(
-								'field' => 'slug',
-								'taxonomy' => 'location',
-								// 'terms' => $accommodation,
-								'terms' => $custom_terms[0]->slug, 
-							),
-						),
-
-					));
-				?>
 
 				<?php if ($properties->have_posts()) { ?>
 					<p><strong>Similar properties</strong></p>

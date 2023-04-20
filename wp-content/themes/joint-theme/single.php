@@ -127,7 +127,8 @@
 				</div>
 				<?php } ?>
 
-				<div class="property__item">
+				<div class="property__item property__item-contact">
+					<p>We'd love to hear from you so we can help you on your journey to finding your new home</p>
 					<a href="https://applicant.arthuronline.co.uk/jointliving/app-form" target="_blank" class="btn mb-s">Get in touch</a>
 				</div>
 

@@ -106,6 +106,11 @@
 				</div>
 				<?php } ?>
 
+
+				<div class="property__item">
+					<a href="https://applicant.arthuronline.co.uk/jointliving/app-form" target="_blank" class="btn mb-s">Get in touch</a>
+				</div>
+
 			</div>
 			<div class="property__contact">
 
@@ -123,7 +128,7 @@
 				<?php } ?>
 
 				<div class="property__item">
-					<a href="//joint.local:3000/accommodation/92-newick-road/" class="btn mb-s">Enquire about this property</a>
+					<a href="https://applicant.arthuronline.co.uk/jointliving/app-form" target="_blank" class="btn mb-s">Get in touch</a>
 				</div>
 
 				<?php

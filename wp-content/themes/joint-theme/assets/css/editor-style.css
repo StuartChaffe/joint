@@ -666,11 +666,12 @@ div[data-type="core/button"] div[data-block] {
   margin-bottom: 0;
 }
 .property__item-contact {
-  border-bottom: 0;
+  border: 0 !important;
   background-color: var(--color-grey);
   border-radius: 10px;
   padding: 30px !important;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .property__item-contact .btn, .property__item-contact span.btn--primary a, span.btn--primary .property__item-contact a, .property__item-contact span.btn a, span.btn .property__item-contact a {
   margin-top: 1rem;

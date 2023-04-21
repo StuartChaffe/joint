@@ -19,6 +19,8 @@
 	$garden = $details['garden'];
 	$kitchen = $details['kitchen'];
 	$tour = $details['tour_link'];
+	$propcta = get_field('property_cta', 'options');
+	$propctabtn = get_field('property_button', 'options');
 
 	$images = get_field('images', get_the_id());
 	$locations = get_the_terms( get_the_ID(), 'location' );
@@ -58,7 +60,7 @@
 					<h4 class="text--orange text--body text--bold"><?php the_title(); ?>, 
 						<?php foreach ( $locations as $location ) { ?><?php echo $location->name ; ?><?php } ?>, <?php if($postcode) { ?><?php echo $postcode; ?><?php } ?>
 					</h4>
-					<?php if($tour) { ?><a href="<?php echo $tour; ?>" target="_blank" class="btn btn--tour">Take 3D Tour <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Space logo" /></a><?php } ?>
+					<?php if($tour) { ?><a href="<?php echo $tour; ?>" target="_blank" class="btn btn--tour">Take 3D Tour <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
 				</div>
 
 				<div class="property__item">
@@ -107,8 +109,9 @@
 				<?php } ?>
 
 
-				<div class="property__item">
-					<a href="https://applicant.arthuronline.co.uk/jointliving/app-form" target="_blank" class="btn mb-s">Get in touch</a>
+				<div class="property__item property__item-contact">
+					<?php if($propcta) { ?><p><?php echo $propcta; ?><p><?php } ?>
+					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
 				</div>
 
 			</div>
@@ -128,8 +131,8 @@
 				<?php } ?>
 
 				<div class="property__item property__item-contact">
-					<p>We'd love to hear from you so we can help you on your journey to finding your new home</p>
-					<a href="https://applicant.arthuronline.co.uk/jointliving/app-form" target="_blank" class="btn mb-s">Get in touch</a>
+					<?php if($propcta) { ?><p><?php echo $propcta; ?><p><?php } ?>
+					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
 				</div>
 
 				<?php

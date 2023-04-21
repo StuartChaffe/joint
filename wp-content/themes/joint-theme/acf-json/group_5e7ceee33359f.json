@@ -140,6 +140,42 @@
             "append": ""
         },
         {
+            "key": "field_6442542d6cd92",
+            "label": "Property CTA",
+            "name": "property_cta",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Get in touch with our friendly team to find out more about this property and to arrange a viewing",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64425673ff3a5",
+            "label": "Property CTA Button",
+            "name": "property_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_6210d741bb525",
             "label": "Analytics",
             "name": "",
@@ -419,5 +455,5 @@
     "active": true,
     "description": "Set theme options",
     "show_in_rest": 0,
-    "modified": 1669819348
+    "modified": 1682069168
 }

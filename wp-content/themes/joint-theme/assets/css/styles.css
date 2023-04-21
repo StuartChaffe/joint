@@ -1933,6 +1933,9 @@ span.btn--primary:hover, span.btn--primary:focus {
   background-color: white;
   margin-bottom: 2rem !important;
 }
+.site-footer__form .property__item-contact .btn, .site-footer__form .property__item-contact span.btn a, span.btn .site-footer__form .property__item-contact a, .site-footer__form .property__item-contact span.btn--primary a, span.btn--primary .site-footer__form .property__item-contact a {
+  margin-top: 2rem;
+}
 
 .site-footer__inner {
   flex-direction: column;

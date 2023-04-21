@@ -57,6 +57,13 @@
 			}
 		}
 	}
+	&__form {
+		.property__item-contact {
+			background-color: white;
+			// padding-top: 0 !important;
+			margin-bottom: 2rem !important;
+		}
+	}
 }
 
 .site-footer__inner {

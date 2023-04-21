@@ -1,21 +1,20 @@
 <?php 
 $popup = get_field('show_popup');
 $popupcontent = get_field('modal_content', 'options');
+$propcta = get_field('property_cta', 'options');
+$propctabtn = get_field('property_button', 'options');
 ?>
 <footer class="site-footer">
 	<div class="site-footer__inner">
 		<div class="site-footer__left">
 			<div class="site-footer__form">
-				<p>Keep me updated</p>
-				<br />
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-				<script>
-				hbspt.forms.create({
-					region: "na1",
-					portalId: "7287208",
-					formId: "2343c70e-4e9b-40fc-b18c-93860c58d3e3"
-				});
-				</script>
+
+			<?php if($propcta) { ?>
+				<div class="property__item property__item-contact">
+					<p><?php echo $propcta; ?><p>
+					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
+				</div>
+				<?php } ?>
 			</div>
 
 			<div class="site-footer__logos">

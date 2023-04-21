@@ -678,7 +678,7 @@ div[data-type="core/button"] div[data-block] {
   background-color: var(--color-grey);
   border-radius: 10px;
   padding: 30px !important;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 .property__item-contact .btn, .property__item-contact span.btn--primary a, span.btn--primary .property__item-contact a, .property__item-contact span.btn a, span.btn .property__item-contact a {

@@ -628,8 +628,16 @@ div[data-type="core/button"] div[data-block] {
   }
 }
 .property__content {
-  padding-right: var(--spacing);
-  margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-s);
+}
+@media (min-width: 50em) {
+  .property__content {
+    padding-right: var(--spacing);
+    margin-bottom: var(--spacing-l);
+  }
+}
+.property__contact {
+  margin-bottom: var(--spacing-s);
 }
 @media (min-width: 50em) {
   .property__contact {

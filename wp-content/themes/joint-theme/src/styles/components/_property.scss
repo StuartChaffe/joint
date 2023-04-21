@@ -27,10 +27,14 @@
 		}
 	}
 	&__content {
-		padding-right: var(--spacing);
-		margin-bottom: var(--spacing-l);
+		margin-bottom: var(--spacing-s);
+		@include mq(medium) {
+			padding-right: var(--spacing);
+			margin-bottom: var(--spacing-l);
+		}
 	}
 	&__contact {
+		margin-bottom: var(--spacing-s);
 		@include mq(medium) {
 			padding-left: var(--spacing);
 		}

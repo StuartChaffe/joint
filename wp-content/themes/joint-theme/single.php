@@ -110,7 +110,7 @@
 
 
 				<?php if($propcta) { ?>
-				<div class="property__item property__item-contact">
+				<div class="property__item property__item-contact hidemobile">
 					<p><?php echo $propcta; ?><p>
 					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
 				</div>
@@ -305,6 +305,13 @@
 						</div>
 					<?php endwhile; ?>
 					</div>
+				<?php } ?>
+
+				<?php if($propcta) { ?>
+				<div class="property__item property__item-contact hidedesktop">
+					<p><?php echo $propcta; ?><p>
+					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
+				</div>
 				<?php } ?>
 
 			</div>

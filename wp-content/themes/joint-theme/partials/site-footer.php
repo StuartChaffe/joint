@@ -11,7 +11,7 @@ $propctabtn = get_field('property_button', 'options');
 
 			<?php if($propcta) { ?>
 				<div class="property__item property__item-contact">
-					<p><?php echo $propcta; ?><p>
+					<p><strong>Keep me updated</strong><p>
 					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
 				</div>
 				<?php } ?>

@@ -3,6 +3,7 @@
 <?php while ( have_posts() ) : the_post(); 
 
 	$details = get_field('property_details', get_the_id());
+	$id = get_the_ID();
 	$postcode = $details['postcode'];
 	$rooms = $details['total_rooms'];
 	$available = $details['available_rooms'];
@@ -317,6 +318,15 @@
 			</div>
 		</div>
 	</article>
+
+<script>
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		'event': 'accomodation_view',
+		'accomodation_id': '<?php echo $id; ?>',
+		'accomodation_name': '<?php the_title(); ?>',
+	});
+</script>
 
 <?php endwhile; ?>
 

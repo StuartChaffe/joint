@@ -898,7 +898,12 @@ div[data-type="core/button"] div[data-block] {
   opacity: 0.7;
 }
 .gallery-nav--item img {
-  border: 26px solid transparent;
+  border: 10px solid transparent;
+}
+@media (min-width: 50em) {
+  .gallery-nav--item img {
+    border: 26px solid transparent;
+  }
 }
 .gallery-nav--item:hover {
   cursor: pointer;

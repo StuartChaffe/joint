@@ -3,6 +3,33 @@
     "title": "Property Details",
     "fields": [
         {
+            "key": "field_6628fca02b3d3",
+            "label": "Status",
+            "name": "status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Live": "Live",
+                "Available": "Available",
+                "Both": "Both"
+            },
+            "default_value": "Live",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_63569695c86e6",
             "label": "Images",
             "name": "images",
@@ -446,6 +473,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_635267b327f06",
                     "sub_fields": [
                         {
                             "key": "field_6352680b27f09",
@@ -489,8 +517,7 @@
                             "append": "",
                             "parent_repeater": "field_635267e827f08"
                         }
-                    ],
-                    "parent_repeater": "field_635267b327f06"
+                    ]
                 }
             ]
         },
@@ -586,5 +613,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667843454
+    "modified": 1715166954
 }

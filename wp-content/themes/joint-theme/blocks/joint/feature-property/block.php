@@ -31,7 +31,7 @@ $allowed_blocks 	= array( 'core/heading', 'core/paragraph', 'core/button', 'core
 			$price = $details['price'];
 			$pricebills = $details['price_bills'];
 		?>
-			<a href="<?php esc_url(the_permalink($property) ); ?>" class="feature-properties__item">
+			<a href="<?php the_permalink($property); ?>" class="feature-properties__item">
 			<?php if( get_the_post_thumbnail($property) ) { ?>	
 				<?php echo get_the_post_thumbnail($property); ?>
 			<?php } else { ?>

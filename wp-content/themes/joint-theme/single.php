@@ -22,6 +22,8 @@
 	$tour = $details['tour_link'];
 	$propcta = get_field('property_cta', 'options');
 	$propctabtn = get_field('property_button', 'options');
+	$propform = get_field('property_form', 'options');
+	$propformbtn= get_field('property_form_btn_text', 'options');	
 
 	$images = get_field('images', get_the_id());
 	$locations = get_the_terms( get_the_ID(), 'location' );
@@ -111,10 +113,11 @@
 
 
 				<?php if($propcta) { ?>
-				<div class="property__item property__item-contact hidemobile">
-					<p><?php echo $propcta; ?><p>
-					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
+				<div class="property__item property__item-contact hidehidemobile">
+					<?php echo $propcta; ?>
 				</div>
+				<a id ="form"></a>
+				<?php echo $propform; ?>
 				<?php } ?>
 
 			</div>
@@ -135,8 +138,7 @@
 
 				<?php if($propcta) { ?>
 				<div class="property__item property__item-contact">
-					<p><?php echo $propcta; ?><p>
-					<?php if($propctabtn) { ?><a href="<?php echo $propctabtn['url']; ?>" target="<?php echo $propctabtn['target']; ?>" class="btn btn--tour"><?php echo $propctabtn['title']; ?> <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
+					<?php if($propformbtn) { ?><a href="#form" class="btn btn--tour"><?php if($propformbtn) { ?><?php echo $propformbtn; ?><?php } ?>  <img src="<?php echo get_template_directory_uri(); ?>/src/images/tour-icon.png" alt="Tour icon" /></a><?php } ?>
 				</div>
 				<?php } ?>
 

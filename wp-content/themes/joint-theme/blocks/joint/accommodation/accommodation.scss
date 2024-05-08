@@ -21,6 +21,20 @@
 			border-bottom: 0;
 		}
 	}
+	&__available {
+		.accommodation__image {
+			width: 100%;
+			@include mq(medium) {
+				width: 40%;
+			}
+		}
+		.accommodation__content {
+			width: 100%;
+			@include mq(medium) {
+				width: 60%;
+			}
+		}
+	}
 	&__image {
 		width: 100%;
 		margin-bottom: var(--spacing-s);

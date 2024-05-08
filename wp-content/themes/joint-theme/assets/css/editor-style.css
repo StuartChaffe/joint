@@ -926,6 +926,22 @@ span.btn--primary:hover, span.btn--primary:focus {
 .accommodation__item:last-child {
   border-bottom: 0;
 }
+.accommodation__available .accommodation__image {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .accommodation__available .accommodation__image {
+    width: 40%;
+  }
+}
+.accommodation__available .accommodation__content {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .accommodation__available .accommodation__content {
+    width: 60%;
+  }
+}
 .accommodation__image {
   width: 100%;
   margin-bottom: var(--spacing-s);

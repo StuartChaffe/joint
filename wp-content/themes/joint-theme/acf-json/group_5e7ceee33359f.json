@@ -160,6 +160,46 @@
             "append": ""
         },
         {
+            "key": "field_65a6978152478",
+            "label": "Property Form",
+            "name": "property_form",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_65a698094a298",
+            "label": "Button Text",
+            "name": "property_form_btn_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64425673ff3a5",
             "label": "Property CTA Button",
             "name": "property_button",
@@ -455,5 +495,5 @@
     "active": true,
     "description": "Set theme options",
     "show_in_rest": 0,
-    "modified": 1682069168
+    "modified": 1705416772
 }

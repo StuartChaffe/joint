@@ -3,6 +3,33 @@
     "title": "Accommodation",
     "fields": [
         {
+            "key": "field_6629010286f4a",
+            "label": "Select status",
+            "name": "select_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Live": "Live",
+                "Available": "Available",
+                "Both": "Both"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_635166ca71a1f",
             "label": "Select location",
             "name": "select_location",
@@ -10,7 +37,15 @@
             "type": "taxonomy",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6629010286f4a",
+                        "operator": "==",
+                        "value": "Live"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -22,8 +57,10 @@
             "load_terms": 0,
             "return_format": "id",
             "field_type": "checkbox",
+            "bidirectional": 0,
             "multiple": 0,
-            "allow_null": 0
+            "allow_null": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -44,5 +81,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666341152
+    "modified": 1715166927
 }

@@ -14,7 +14,8 @@ $accommodation = get_field( 'select_location');
 	$properties = new WP_Query( array(
 		'post_type' => 'accommodation',
 		'posts_per_page' => -1,
-		'orderby' => 'rand',
+		// 'orderby' => 'menu_order',
+		// 'order' => 'ASC',
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'location',
@@ -41,7 +42,7 @@ $accommodation = get_field( 'select_location');
 		$features = get_field('features', get_the_id());
 		$benefits = get_the_terms( get_the_ID(), 'benefits' );
 	?>
-	<?php if ($status == 'Live') { ?>
+	<?php if ($status !== 'Available' or $status !== 'Both') { ?>
 		<div class="accommodation__item">
 			<div class="accommodation__image">
 			<a href="<?php the_permalink(); ?>">

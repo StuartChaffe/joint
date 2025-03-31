@@ -7,7 +7,9 @@
 	$postcode = $details['postcode'];
 	$rooms = $details['total_rooms'];
 	$available = $details['available_rooms'];
+	$availableinfo = $details['available_dates'];
 	$availabledate = $details['available_from'];
+	$availabletext = $details['available_dates_text'];
 	$price = $details['price'];
 	$pricebills = $details['price_bills'];
 	$desc = $details['description'];
@@ -30,6 +32,7 @@
 	$benefits = get_the_terms( get_the_ID(), 'benefits' );
 	$features = get_the_terms( get_the_ID(), 'features' );
 	$amenities = get_the_terms( get_the_ID(), 'amenities' );
+	$fullylet = get_field('fully_let', 'options');
 ?>
 
 	<article id="content" class="property">
@@ -72,14 +75,18 @@
 				</div>
 
 				<div class="property__item property__rooms">
-					<div>
-						<?php if($rooms) { ?><strong><?php echo $rooms; ?> room<?php if($rooms > '1') { echo 's'; } ?> remaining<?php } ?></strong><br />
+					<div><?php if($rooms > '1') { ?>
+						<?php if($rooms) { ?><strong><?php echo $rooms; ?> room<?php if($rooms > '1') { echo 's'; } ?> remaining</strong><br /><?php } ?>
+						<?php } else { ?><p><strong><?php echo $fullylet; ?></strong></p><?php } ?>
 						<?php if($available) { ?><?php echo $available; ?> bedroom house<?php } ?>
 					</div>
 					<div>
+					<?php if ($availableinfo == 'true') { ?> 
 						<?php if($availabledate) { ?><strong>Available from</strong><br />
 							<?php echo $availabledate; ?>
 						<?php } ?>
+					<?php } else { ?>
+						<strong><p><?php echo $availabletext; ?></p></strong><?php } ?>
 					</div>
 				</div>
 

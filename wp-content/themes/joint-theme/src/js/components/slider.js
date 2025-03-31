@@ -57,34 +57,34 @@ jQuery(document).ready(function($) {
 		]
 	}); 
 
-	$(".feature-properties__list").slick({
-		// settings: "unslick",
-		speed: 200,
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		autoplay: false,
-		arrows: true,
-		infinite: true,
-		dots: false,
-		responsive: [
-			{
-				breakpoint: 1170,
-				settings: {
-				slidesToShow: 3,
-				}
-			},
-			{
-				breakpoint: 670,
-				settings: {
-				slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 600,
-				settings: {
-				slidesToShow: 1,
-				}
-			}
-		]
-	}); 
+	// $(".feature-properties__list").slick({
+	// 	// settings: "unslick",
+	// 	speed: 200,
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 1,
+	// 	autoplay: false,
+	// 	arrows: true,
+	// 	infinite: true,
+	// 	dots: false,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 1170,
+	// 			settings: {
+	// 			slidesToShow: 3,
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 670,
+	// 			settings: {
+	// 			slidesToShow: 2,
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 600,
+	// 			settings: {
+	// 			slidesToShow: 2,
+	// 			}
+	// 		}
+	// 	]
+	// }); 
 });

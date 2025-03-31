@@ -94,6 +94,27 @@
                     "append": ""
                 },
                 {
+                    "key": "field_67eaa47c355f5",
+                    "label": "Show available dates?",
+                    "name": "available_dates",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_635265f95cad9",
                     "label": "Available from",
                     "name": "available_from",
@@ -101,7 +122,15 @@
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67eaa47c355f5",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "50",
                         "class": "",
@@ -109,6 +138,36 @@
                     },
                     "default_value": "",
                     "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67eaa4df30d78",
+                    "label": "Alternative available text?",
+                    "name": "available_dates_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67eaa47c355f5",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
@@ -613,5 +672,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715166954
+    "modified": 1743430987
 }

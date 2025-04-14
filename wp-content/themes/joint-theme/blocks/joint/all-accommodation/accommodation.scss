@@ -1,0 +1,113 @@
+.accommodation {
+	@extend .container;
+	display: flex;
+	flex-direction: column;
+	padding-top: var(--spacing-l);
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding: var(--spacing) 0;
+		border-bottom: 1px solid black;
+
+		@include mq(medium) {
+			padding: var(--spacing-l) 0;
+			flex-direction: row;
+		}
+
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	&__available {
+		.accommodation__image {
+			width: 100%;
+			@include mq(medium) {
+				width: 40%;
+			}
+		}
+		.accommodation__content {
+			width: 100%;
+			@include mq(medium) {
+				width: 60%;
+			}
+		}
+	}
+	&__image {
+		width: 100%;
+		margin-bottom: var(--spacing-s);
+		@include mq(medium) {
+			width: 50%;
+			margin-bottom: 0;
+		}
+		img {
+			width: 100%;
+			border-radius: var(--border-radius);
+		}
+		.property__benefits {
+			margin-top: var(--spacing-s);
+			img {
+				border-radius: 0;
+			}
+		}
+	}
+	&__content {
+		width: 100%;
+		@include mq(medium) {
+			width: 50%;
+			padding-left: var(--spacing-s);
+		}
+		.btn {
+			width: 100%;
+			@include mq(medium) {
+				width: 50%;
+			}
+		}
+	}
+	&__details {
+		display: flex;
+		margin: var(--spacing) 0;
+		> div {
+			flex: 1 1 0;
+			&:last-child {
+				padding-left: var(--spacing-s);
+			}
+		}
+	}
+	&__rooms,
+	&__price {
+		font-size: var(--font-size-lead);
+		margin-bottom: var(--spacing-s);
+		p {
+			margin-bottom: 0;
+		}
+	}
+	&__amenities {
+		&-item {
+			margin-bottom: var(--spacing-s);
+		}
+	}
+	&__features {
+		ul {
+			list-style-type: disc;
+			margin-top: 0;
+		}
+	}
+}
+
+.accommodation-featured {
+	margin-top: var(--spacing);
+	.accommodation__item {
+		flex-direction: column;
+	}
+	.accommodation__image,
+	.accommodation__content {
+		width: 100%;
+	}
+	.accommodation__content {
+		margin-top: var(--spacing);
+		padding-left: 0;
+	}
+}

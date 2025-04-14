@@ -13,11 +13,12 @@ $image			= get_field('banner_image');
 $mobileimage	= get_field('banner_image_mobile');
 $content		= get_field('banner_content');
 $ticker			= get_field('ticker_content');
+$size			= get_field('banner_size');
 $allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/button' );
 // $button		= get_field('banner_button');
 // $bkg 		= get_field('banner_content_bkg');
 ?>
-<section class="banner">
+<section class="banner <?php echo $size; ?>">
 	<div class="banner__content">
 		<?php echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $allowed_blocks ) ) . '" />'; ?>
 		<?php if ( $content ) { ?><?php echo $content; ?><?php } ?>

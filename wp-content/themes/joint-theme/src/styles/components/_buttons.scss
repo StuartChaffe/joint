@@ -53,6 +53,19 @@ span.btn {
 	margin-top: var(--spacing);
 }
 
+.btn--secondary{
+	position: relative;
+	background: var(--color-primary);
+	padding: 0.5rem 1rem;
+}
+.btn--large {
+	margin-top: var(--spacing);
+	width: 100%;
+	padding: 1rem 1rem;
+	font-size: var(--font-size-lead);
+}
+
+
 span.btn--primary {
 	padding: 0;
 	a {

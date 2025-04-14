@@ -11,6 +11,13 @@
 		justify-content: center;
 		min-height: 100vh;
 	}
+	&--small {
+		min-height: 0;
+		.banner__content {
+			min-height: 50vh;
+			padding-top: 100px;
+		}
+	}
 
 	&__content {
 		@extend .container;

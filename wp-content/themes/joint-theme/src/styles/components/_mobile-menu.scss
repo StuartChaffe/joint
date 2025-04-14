@@ -21,12 +21,21 @@ body.nav-open {
 			margin-left: auto;
 		}
 		&__contact {
-			color: var(--color-primary);
+			border: 1px solid var(--color-text-base);
+			border-radius: 40px;
+			padding: 0.5rem 2rem;
+
+			color: var(--color-text-base);
 			text-align: center;
 			margin-bottom: 2rem;
 			a {
-				color: var(--color-primary);
+				color: var(--color-text-base);
 				font-weight: var(--font-weight-bold);
+			}
+			&:hover {
+				text-decoration: none !important;
+				color: var(--color-primary);
+				border: 1px solid var(--color-primary);
 			}
 		}
 

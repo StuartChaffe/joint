@@ -4,7 +4,7 @@
 	.feature-properties__list {
 		margin-top: 0;
 		@include mq(large) { 
-			margin-top: 1rem;
+			// margin-top: 1rem;
 		}
 	}
 }
@@ -22,6 +22,13 @@
 	@include mq(large) {
 		padding: var(--spacing-xl) 0;
 		padding-bottom: 0;
+	}
+	&__header {
+		width: 100%;
+		@extend .container;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 	&__list {
 		@extend .container;
@@ -77,14 +84,16 @@
 		
 		@include mq(medium) {
 			// width: calc(50% - 1rem);
+			// width: calc(50% - 1rem);
 			// flex: 1 1 0px;
 			// margin: 0 0.5rem 1rem 0.5rem;
 			margin: 0 0.5rem 1rem 0.5rem;
 		}
 		@include mq(large) {
-			flex: 1 1 0px;
+			width: calc(25% - 1rem);
+			// flex: 1 1 0px;
 			// margin: 0 0.5rem;
-			margin: 0 0.5rem;
+			// margin: 0 0.5rem;
 		}
 		p {
 			margin-bottom: 0;

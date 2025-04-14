@@ -7,6 +7,7 @@ import './components/toggle';
 import './components/accordion';
 import './components/menu';
 import './components/slider';
+import './components/mixitup';
 
 // jQuery(document).ready(function($) {
 // 	$('.modal--close').click(function() {

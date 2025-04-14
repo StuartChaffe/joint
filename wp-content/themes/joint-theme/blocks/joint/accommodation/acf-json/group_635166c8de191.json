@@ -21,7 +21,7 @@
                 "Available": "Available",
                 "Both": "Both"
             },
-            "default_value": false,
+            "default_value": "Live",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -61,6 +61,33 @@
             "multiple": 0,
             "allow_null": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_67fd2d5954b62",
+            "label": "Style",
+            "name": "list_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Small": "Small",
+                "Large": "Large"
+            },
+            "default_value": "If you'd like to list all properties with full details select 'Large'. Otherwise 'Small' for a card view that displays 8 latest properties.",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -81,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715166927
+    "modified": 1744645629
 }

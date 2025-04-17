@@ -1636,7 +1636,6 @@ span.btn--primary:hover, span.btn--primary:focus {
 @media (min-width: 50em) {
   .site-header__logo {
     width: 180px;
-    margin-left: auto;
   }
 }
 

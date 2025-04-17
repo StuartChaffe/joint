@@ -27,6 +27,13 @@
                 "operator": "==",
                 "value": "all"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/custom-block-joint-666"
+            }
         ]
     ],
     "menu_order": 0,
@@ -38,5 +45,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700832479
+    "modified": 1744709100
 }

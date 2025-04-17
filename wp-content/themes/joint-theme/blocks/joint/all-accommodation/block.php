@@ -30,7 +30,7 @@ $fullylet  = get_field('fully_let', 'options');
 <section class="feature-properties">
 	<div class="mixitup-control">
 		<?php if( ! empty( $locations ) ) {?>
-			<!-- <button type="button" data-filter="all">All</button> -->
+			<button type="button" data-filter="all">All</button>
 		<?php foreach ( $locations as $location ) { ?>
 			<button type="button" data-filter=".<?php echo $location->slug; ?>"><?php echo $location->name; ?></button>
 		<?php } ?>

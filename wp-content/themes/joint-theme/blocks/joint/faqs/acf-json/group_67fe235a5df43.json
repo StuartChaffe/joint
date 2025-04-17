@@ -1,11 +1,11 @@
 {
-    "key": "group_6357f73f02311",
-    "title": "Reviews",
+    "key": "group_67fe235a5df43",
+    "title": "FAQs",
     "fields": [
         {
-            "key": "field_6357f829c79fb",
+            "key": "field_67fe235a61e96",
             "label": "Content",
-            "name": "reviews_content",
+            "name": "faqs_content",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -18,14 +18,15 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_6357f7fff15ca",
-            "label": "Select reviews",
-            "name": "select_reviews",
+            "key": "field_67fe235a61e9f",
+            "label": "Select FAQs",
+            "name": "select_faqs",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
@@ -37,12 +38,15 @@
                 "id": ""
             },
             "post_type": [
-                "reviews"
+                "faqs"
             ],
+            "post_status": "",
             "taxonomy": "",
             "return_format": "object",
             "multiple": 1,
             "allow_null": 0,
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": []
         }
@@ -52,7 +56,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/custom-block-joint-6"
+                "value": "acf\/custom-block-joint-666"
             }
         ]
     ],
@@ -65,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744709468
+    "modified": 1744709480
 }

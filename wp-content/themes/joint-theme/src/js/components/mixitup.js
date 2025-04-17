@@ -7,7 +7,7 @@ jQuery(document).ready(function( $ ) {
 	var hash = window.location.hash.replace(/^#/g, '');
 
 	var currentLimit = -1;
-	var incrementAmount = 9;
+	var incrementAmount = -1;
 	// var incrementAmount = 3;
 
 	if (!containerEl) {
@@ -123,29 +123,4 @@ jQuery(document).ready(function( $ ) {
 			mixer.filter('all');
 		}
 	}
-});
-
-jQuery(document).ready(function( $ ) {
-	var containerEl = document.querySelector('.mixitup-faq');
-	var selectFilter = document.querySelector('.select-filter');
-	var initialFilter = 'all';
-	var hash = window.location.hash.replace(/^#/g, '');
-
-	if (!containerEl) {
-		return false;
-	}
-	if (hash) {
-		initialFilter = '.' + hash;
-	}
-
-	var mixer = mixitup(containerEl, {
-		animation: {
-			duration: 100,
-			nudge: true,
-			reverseOut: false,
-		},
-		load: {
-			filter: initialFilter
-		}
-	});
 });

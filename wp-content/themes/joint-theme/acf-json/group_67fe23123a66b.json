@@ -1,11 +1,11 @@
 {
-    "key": "group_6357f73f02311",
-    "title": "Reviews",
+    "key": "group_67fe23123a66b",
+    "title": "FAQ Details",
     "fields": [
         {
-            "key": "field_6357f829c79fb",
-            "label": "Content",
-            "name": "reviews_content",
+            "key": "field_67fe231240f41",
+            "label": "Question",
+            "name": "question",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -18,16 +18,17 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_6357f7fff15ca",
-            "label": "Select reviews",
-            "name": "select_reviews",
+            "key": "field_67fe231240f4b",
+            "label": "Answer",
+            "name": "answer",
             "aria-label": "",
-            "type": "post_object",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,23 +37,20 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "reviews"
-            ],
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 1,
-            "allow_null": 0,
-            "ui": 1,
-            "bidirectional_target": []
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/custom-block-joint-6"
+                "value": "faqs"
             }
         ]
     ],
@@ -61,9 +59,24 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744709468
+    "modified": 1744709477
 }

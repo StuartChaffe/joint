@@ -87,6 +87,8 @@ function joint_allowed_block_types( $allowed_blocks ) {
 		'acf/custom-block-joint-224',
 		'acf/custom-block-joint-333',
 		'acf/custom-block-joint-444',
+		'acf/custom-block-joint-555',
+		'acf/custom-block-joint-666',
 		'acf/custom-block-joint-1211',
 		
 		

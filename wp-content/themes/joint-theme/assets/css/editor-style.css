@@ -511,7 +511,7 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .feature-properties__list, .feature-properties__header, .feature-pages__list, .banner__content, .accommodation, .property__details, .property__title {
+.container, .map--inner, .feature-properties__list, .feature-properties__header, .feature-pages__list, .faqs--inner, .banner__content, .accommodation, .property__details, .property__title {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -1371,6 +1371,118 @@ span.btn--primary:hover, span.btn--primary:focus {
     transform: translate(-100%, 0);
   }
 }
+.faqs--inner {
+  padding: var(--spacing);
+}
+@media (min-width: 50em) {
+  .faqs--inner {
+    padding: var(--spacing-xl);
+  }
+}
+@media (min-width: 80em) {
+  .faqs--inner {
+    padding: var(--spacing-xl) 0;
+  }
+}
+.faqs-slider {
+  margin: var(--spacing) -10px 0 -10px;
+}
+.faqs-slider .slick-track {
+  gap: 20px;
+}
+.faqs-slider .slick-dots {
+  bottom: -30px;
+}
+.faqs-slider .slick-prev {
+  left: -1.5rem;
+}
+@media (min-width: 50em) {
+  .faqs-slider .slick-prev {
+    left: -2rem;
+  }
+}
+@media (min-width: 80em) {
+  .faqs-slider .slick-prev {
+    left: -72px;
+  }
+}
+.faqs-slider .slick-prev:before {
+  content: url("../../src/icons/slider-arrow-prev-white.svg");
+}
+[dir=rtl] .faqs-slider .slick-prev:before {
+  content: url("../../src/icons/slider-arrow-prev-white.svg");
+}
+.faqs-slider .slick-next {
+  right: -1.5rem;
+}
+@media (min-width: 50em) {
+  .faqs-slider .slick-next {
+    right: -2rem;
+  }
+}
+@media (min-width: 80em) {
+  .faqs-slider .slick-next {
+    right: -72px;
+  }
+}
+.faqs-slider .slick-next:before {
+  content: url("../../src/icons/slider-arrow-white.svg");
+}
+[dir=rtl] .faqs-slider .slick-next:before {
+  content: url("../../src/icons/slider-arrow-white.svg");
+}
+.faqs-slider--item {
+  height: 220px;
+  border-radius: var(--border-radius);
+  color: var(--color-text-base) !important;
+}
+.faqs-slider--item .accordion__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 20px;
+  width: 20px;
+  z-index: 9999;
+}
+.faqs-slider--item .accordion__icon:before, .faqs-slider--item .accordion__icon:after {
+  background-color: var(--color-primary);
+}
+.faqs-slider--item .accordion__handle {
+  padding: var(--spacing-s);
+  font-size: var(--font-size-h5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+.faqs-slider--item .accordion__handle p {
+  color: var(--color-primary) !important;
+}
+.faqs-slider--item .accordion__handle.is-active {
+  background-color: var(--color-primary);
+  border: 5px solid white;
+}
+.faqs-slider--item .accordion__handle.is-active .accordion__icon:before, .faqs-slider--item .accordion__handle.is-active .accordion__icon:after {
+  background-color: white;
+}
+.faqs-slider--item .accordion__body {
+  position: absolute;
+  overflow: auto;
+  height: calc(100% - var(--spacing-s));
+  top: 0;
+  left: 0;
+  padding: var(--spacing-s);
+}
+.faqs-slider--item .accordion__body p, .faqs-slider--item .accordion__body a {
+  color: white !important;
+  font-size: 16px;
+}
+.faqs-slider--item .accordion__body a {
+  text-decoration: underline;
+}
+
 .feature-properties + .feature-pages {
   padding-top: 0;
 }
@@ -1853,6 +1965,37 @@ span.btn--primary:hover, span.btn--primary:focus {
   margin-top: auto;
 }
 
+.map {
+  padding: var(--spacing);
+}
+@media (min-width: 50em) {
+  .map {
+    padding: var(--spacing-xl);
+  }
+}
+.map--inner {
+  background-color: var(--color-grey-light);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-s);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (min-width: 50em) {
+  .map--inner {
+    padding: var(--spacing);
+  }
+}
+.map--inner .wp-block-button {
+  margin-top: 0;
+  margin-bottom: var(--spacing-s);
+  margin-left: auto;
+}
+.map--inner iframe {
+  border: 0;
+  width: 100%;
+}
+
 .meal-plan {
   display: flex;
   flex-wrap: wrap;
@@ -2152,4 +2295,30 @@ ul, ol {
 ul li, ol li {
   padding-left: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+:where(.editor-styles-wrapper) .faqs-slider {
+  display: flex;
+  gap: 20px;
+}
+
+.faqs-slider {
+  display: flex;
+}
+.faqs-slider .faqs-slider--item {
+  display: none !important;
+  opacity: 1 !important;
+}
+.faqs-slider .faqs-slider--item:nth-child(-n+4) {
+  display: flex !important;
+  flex: 1;
+}
+
+.map--inner .block-editor-block-list__layout {
+  width: 100%;
+}
+
+.block-editor-inner-blocks {
+  display: flex;
+  width: 100%;
 }

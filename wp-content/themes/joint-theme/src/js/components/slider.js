@@ -28,9 +28,9 @@ jQuery(document).ready(function($) {
 		dots: false,
 		centerMode: true,
 		focusOnSelect: true
-	  });
+	});
 
-	  $(".reviews-slider").slick({
+	$(".reviews-slider").slick({
 		// settings: "unslick",
 		speed: 200,
 		slidesToShow: 2,
@@ -52,6 +52,41 @@ jQuery(document).ready(function($) {
 				breakpoint: 400,
 				settings: {
 				slidesToShow: 1,
+				}
+			}
+		]
+	}); 
+	$(".faqs-slider").slick({
+		// settings: "unslick",
+		speed: 200,
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		autoplay: false,
+		autoplaySpeed: 3000,
+		arrows: true,
+		infinite: true,
+		dots: true,
+
+		responsive: [
+			{
+				breakpoint: 1224,
+				settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				}
+			},
+			{
+				breakpoint: 930,
+				settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 520,
+				settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
 				}
 			}
 		]

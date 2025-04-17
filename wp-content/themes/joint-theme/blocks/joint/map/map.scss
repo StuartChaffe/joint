@@ -1,0 +1,28 @@
+.map {
+	padding: var(--spacing);
+	@include mq(medium) {
+		padding: var(--spacing-xl);
+	}
+	&--inner {
+		@extend .container;
+		background-color: var(--color-grey-light);
+		border-radius: var(--border-radius);
+		padding: var(--spacing-s);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		@include mq(medium) {
+			padding: var(--spacing);
+		}
+		.wp-block-button {
+			margin-top: 0;
+			margin-bottom: var(--spacing-s);
+			margin-left: auto;
+		}
+
+		iframe {
+			border: 0;
+			width: 100%;
+		}
+	}
+}
